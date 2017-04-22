@@ -1,0 +1,5508 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/shtylman/zuul#readme"
+
+    >zuul (v3.11.1)</a>
+</h1>
+<h4>simple browser testing</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul">module zuul</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.zuul">
+            function <span class="apidocSignatureSpan"></span>zuul
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.Electron">
+            function <span class="apidocSignatureSpan">zuul.</span>Electron
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.PhantomBrowser">
+            function <span class="apidocSignatureSpan">zuul.</span>PhantomBrowser
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.SauceBrowser">
+            function <span class="apidocSignatureSpan">zuul.</span>SauceBrowser
+            <span class="apidocSignatureSpan">(conf, opt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.</span>Electron.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.</span>PhantomBrowser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.</span>SauceBrowser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.</span>framework</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.</span>hl</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.Electron">module zuul.Electron</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.Electron.Electron">
+            function <span class="apidocSignatureSpan">zuul.</span>Electron
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.Electron.prototype">module zuul.Electron.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.Electron.prototype.shutdown">
+            function <span class="apidocSignatureSpan">zuul.Electron.prototype.</span>shutdown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.Electron.prototype.start">
+            function <span class="apidocSignatureSpan">zuul.Electron.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.PhantomBrowser">module zuul.PhantomBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.PhantomBrowser.PhantomBrowser">
+            function <span class="apidocSignatureSpan">zuul.</span>PhantomBrowser
+            <span class="apidocSignatureSpan">(opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.PhantomBrowser.prototype">module zuul.PhantomBrowser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.PhantomBrowser.prototype.shutdown">
+            function <span class="apidocSignatureSpan">zuul.PhantomBrowser.prototype.</span>shutdown
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.PhantomBrowser.prototype.start">
+            function <span class="apidocSignatureSpan">zuul.PhantomBrowser.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.SauceBrowser">module zuul.SauceBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.SauceBrowser.SauceBrowser">
+            function <span class="apidocSignatureSpan">zuul.</span>SauceBrowser
+            <span class="apidocSignatureSpan">(conf, opt)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.SauceBrowser.prototype">module zuul.SauceBrowser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.SauceBrowser.prototype.shutdown">
+            function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>shutdown
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.SauceBrowser.prototype.start">
+            function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.SauceBrowser.prototype.toString">
+            function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.framework">module zuul.framework</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Any">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Any
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Anything">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Anything
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.ArrayContaining">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>ArrayContaining
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.CallTracker">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>CallTracker
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Clock">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Clock
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.DelayedFunctionScheduler">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>DelayedFunctionScheduler
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Env">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Env
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.ExceptionFormatter">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>ExceptionFormatter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Expectation">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Expectation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.JsApiReporter">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>JsApiReporter
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.MockDate">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>MockDate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.ObjectContaining">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>ObjectContaining
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.QueueRunner">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>QueueRunner
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.ReportDispatcher">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>ReportDispatcher
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Spec">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Spec
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.SpyRegistry">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>SpyRegistry
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.SpyStrategy">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>SpyStrategy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.StringMatching">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>StringMatching
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Suite">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Suite
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.Timer">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>Timer
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.base">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>base
+            <span class="apidocSignatureSpan">(j$, jasmineGlobal)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.buildExpectationResult">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>buildExpectationResult
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.core">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>core
+            <span class="apidocSignatureSpan">(jRequire)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.interface">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>interface
+            <span class="apidocSignatureSpan">(jasmine, env)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.matchersUtil">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>matchersUtil
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.pp">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>pp
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.requireMatchers">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>requireMatchers
+            <span class="apidocSignatureSpan">(jRequire, j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBe">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBe
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeCloseTo">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeCloseTo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeDefined">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeDefined
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeFalsy">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeFalsy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeGreaterThan">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeGreaterThan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeLessThan">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeLessThan
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeNaN">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeNaN
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeNull">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeNull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeTruthy">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeTruthy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toBeUndefined">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toBeUndefined
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toContain">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toContain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toEqual">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toEqual
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toHaveBeenCalled">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toHaveBeenCalled
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toHaveBeenCalledWith">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toHaveBeenCalledWith
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toMatch">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toMatch
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toThrow">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toThrow
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.toThrowError">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>toThrowError
+            <span class="apidocSignatureSpan">(j$)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.util">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>util
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.framework.version">
+            function <span class="apidocSignatureSpan">zuul.framework.</span>version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.zuul.hl">module zuul.hl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.fixMarkup">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>fixMarkup
+            <span class="apidocSignatureSpan">(value, tabReplace, useBR)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.highlight">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>highlight
+            <span class="apidocSignatureSpan">(language_name, value, ignore_illegals, continuation)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.highlightAuto">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>highlightAuto
+            <span class="apidocSignatureSpan">(text)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.highlightBlock">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>highlightBlock
+            <span class="apidocSignatureSpan">(block, tabReplace, useBR)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.inherit">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>inherit
+            <span class="apidocSignatureSpan">(parent, obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.initHighlighting">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>initHighlighting
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.zuul.hl.initHighlightingOnLoad">
+            function <span class="apidocSignatureSpan">zuul.hl.</span>initHighlightingOnLoad
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>APOS_STRING_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>BACKSLASH_ESCAPE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>BINARY_NUMBER_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>C_BLOCK_COMMENT_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>C_LINE_COMMENT_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>C_NUMBER_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>HASH_COMMENT_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>LANGUAGES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>NUMBER_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>QUOTE_STRING_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">zuul.hl.</span>REGEXP_MODE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>BINARY_NUMBER_RE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>C_NUMBER_RE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>IDENT_RE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>NUMBER_RE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>RE_STARTERS_RE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">zuul.hl.</span>UNDERSCORE_IDENT_RE</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul" id="apidoc.module.zuul">module zuul</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.zuul" id="apidoc.element.zuul.zuul">
+        function <span class="apidocSignatureSpan"></span>zuul
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Zuul(config) {
+    if (!(this instanceof Zuul)) {
+        return new Zuul(config);
+    }
+
+    if (config.browser_retries === undefined) {
+        config.browser_retries = 6;
+    }
+
+    if (config.browser_output_timeout === undefined) {
+        config.browser_output_timeout = -1;
+    }
+
+   if (config.browser_open_timeout === undefined) {
+       config.browser_open_timeout = 120 * 1000;
+   }
+
+    var self = this;
+
+    var ui = config.ui;
+    var framework_dir = frameworks[ui];
+    if (!framework_dir) {
+        throw new Error(&#x27;unsupported ui: &#x27; + ui);
+    }
+
+    config.framework_dir = framework_dir;
+    self._config = config;
+
+    debug(&#x27;config: %j&#x27;, omit(config, [&#x27;sauce_username&#x27;, &#x27;sauce_key&#x27;, &#x27;username&#x27;, &#x27;key&#x27;]));
+
+    // list of browsers to test
+    self._browsers = [];
+
+    self._concurrency = config.concurrency || 5;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.Electron" id="apidoc.element.zuul.Electron">
+        function <span class="apidocSignatureSpan">zuul.</span>Electron
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Electron(opt) {
+    if (!(this instanceof Electron)) {
+        return new Electron(opt);
+    }
+
+    var self = this;
+    self._opt = opt;
+    self.status = {
+        passed: 0,
+        failed: 0
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.PhantomBrowser" id="apidoc.element.zuul.PhantomBrowser">
+        function <span class="apidocSignatureSpan">zuul.</span>PhantomBrowser
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PhantomBrowser(opt) {
+    if (!(this instanceof PhantomBrowser)) {
+        return new PhantomBrowser(opt);
+    }
+
+    var self = this;
+    self._opt = opt;
+    self.status = {
+        passed: 0,
+        failed: 0
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.SauceBrowser" id="apidoc.element.zuul.SauceBrowser">
+        function <span class="apidocSignatureSpan">zuul.</span>SauceBrowser
+        <span class="apidocSignatureSpan">(conf, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SauceBrowser(conf, opt) {
+    if (!(this instanceof SauceBrowser)) {
+        return new SauceBrowser(conf, opt);
+    }
+
+    var self = this;
+    self._conf = conf;
+    self._opt = opt;
+    self._opt.tunnel = (opt.sauce_connect) ? false : (self._opt.tunnel || true);
+    self.stats = {
+        passed: 0,
+        failed: 0
+    };
+    self.debug = debug(&#x27;zuul:sauce:&#x27; + conf.browser + &#x27;:&#x27; + conf.version);
+    self.debug(&#x27;browser conf: %j&#x27;, omit(conf, [&#x27;username&#x27;, &#x27;key&#x27;]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.Electron" id="apidoc.module.zuul.Electron">module zuul.Electron</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.Electron.Electron" id="apidoc.element.zuul.Electron.Electron">
+        function <span class="apidocSignatureSpan">zuul.</span>Electron
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Electron(opt) {
+    if (!(this instanceof Electron)) {
+        return new Electron(opt);
+    }
+
+    var self = this;
+    self._opt = opt;
+    self.status = {
+        passed: 0,
+        failed: 0
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.Electron.prototype" id="apidoc.module.zuul.Electron.prototype">module zuul.Electron.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.Electron.prototype.shutdown" id="apidoc.element.zuul.Electron.prototype.shutdown">
+        function <span class="apidocSignatureSpan">zuul.Electron.prototype.</span>shutdown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shutdown = function () {
+    if (self.controller) {
+        self.controller.shutdown();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            });
+        });
+    });
+};
+
+Electron.prototype.shutdown = function() {
+    if (self.controller) {
+        self.controller.<span class="apidocCodeKeywordSpan">shutdown</span>();
+    }
+};
+
+module.exports = Electron;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.Electron.prototype.start" id="apidoc.element.zuul.Electron.prototype.start">
+        function <span class="apidocSignatureSpan">zuul.Electron.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    var self = this;
+
+    var binpath;
+    try {
+        binpath = require(&#x27;electron-prebuilt&#x27;);
+    } catch (err) {
+        binpath = require(&#x27;electron&#x27;);
+    }
+
+    self.controller = setup_test_instance(self._opt, function(err, url) {
+        if (err) {
+            self.emit(&#x27;error&#x27;, err);
+            self.emit(&#x27;done&#x27;, {
+                passed: false
+            });
+        }
+
+        debug(&#x27;url %s&#x27;, url);
+
+        var reporter = new EventEmitter();
+
+        reporter.on(&#x27;console&#x27;, function(msg) {
+            console.log.apply(console, msg.args);
+        });
+
+        reporter.on(&#x27;test&#x27;, function(test) {
+            console.log(&#x27;starting&#x27;, test.name.white);
+        });
+
+        reporter.on(&#x27;test_end&#x27;, function(test) {
+            if (!test.passed) {
+                console.log(&#x27;failed&#x27;, test.name.red);
+                return self.status.failed++;
+            }
+
+            console.log(&#x27;passed:&#x27;, test.name.green);
+            self.status.passed++;
+        });
+
+        reporter.on(&#x27;assertion&#x27;, function(assertion) {
+            console.log(&#x27;Error: %s&#x27;.red, assertion.message);
+            assertion.frames.forEach(function(frame) {
+                console.log(&#x27;    %s %s:%d&#x27;.grey, frame.func, frame.filename, frame.line);
+            });
+            console.log();
+        });
+
+        reporter.on(&#x27;done&#x27;, function() {
+            reporter.removeAllListeners();
+        });
+
+        self.emit(&#x27;init&#x27;, url);
+        self.emit(&#x27;start&#x27;, reporter);
+
+        var args = [path.join(__dirname, &#x27;electron-run.js&#x27;), url];
+
+        var cp = spawn(binpath, args);
+
+        var errors = [];
+
+        var split = Split();
+        split.on(&#x27;data&#x27;, function(line) {
+            var msg;
+            try {
+                msg = JSON.parse(line);
+            } catch (err) {
+                self.emit(&#x27;error&#x27;, new Error(&#x27;failed to parse json: &#x27; + line));
+                return;
+            }
+
+            debug(&#x27;msg: %j&#x27;, msg);
+            reporter.emit(msg.type, msg);
+        });
+
+        cp.stdout.setEncoding(&#x27;utf8&#x27;);
+        cp.stdout.pipe(split);
+
+        cp.stderr.on(&#x27;data&#x27;, function (data) {
+            if (/INFO:CONSOLE/.test(data)) return;
+            debug(&#x27;electron stderr: &#x27;.red + &#x27;%s&#x27;, data);
+        });
+
+        cp.on(&#x27;close&#x27;, function (code) {
+            self.emit(&#x27;done&#x27;, {
+                passed: self.status.passed,
+                failed: self.status.failed
+            });
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this.started = false;
+this.finished = false;
+
+this.jasmineStarted = function() {
+  this.started = true;
+  status = &#x27;started&#x27;;
+  timer.<span class="apidocCodeKeywordSpan">start</span>();
+};
+
+var executionTime;
+
+this.jasmineDone = function() {
+  this.finished = true;
+  executionTime = timer.elapsed();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.PhantomBrowser" id="apidoc.module.zuul.PhantomBrowser">module zuul.PhantomBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.PhantomBrowser.PhantomBrowser" id="apidoc.element.zuul.PhantomBrowser.PhantomBrowser">
+        function <span class="apidocSignatureSpan">zuul.</span>PhantomBrowser
+        <span class="apidocSignatureSpan">(opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PhantomBrowser(opt) {
+    if (!(this instanceof PhantomBrowser)) {
+        return new PhantomBrowser(opt);
+    }
+
+    var self = this;
+    self._opt = opt;
+    self.status = {
+        passed: 0,
+        failed: 0
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.PhantomBrowser.prototype" id="apidoc.module.zuul.PhantomBrowser.prototype">module zuul.PhantomBrowser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.PhantomBrowser.prototype.shutdown" id="apidoc.element.zuul.PhantomBrowser.prototype.shutdown">
+        function <span class="apidocSignatureSpan">zuul.PhantomBrowser.prototype.</span>shutdown
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shutdown = function () {
+    if (self.controller) {
+        self.controller.shutdown();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            });
+        });
+    });
+};
+
+Electron.prototype.shutdown = function() {
+    if (self.controller) {
+        self.controller.<span class="apidocCodeKeywordSpan">shutdown</span>();
+    }
+};
+
+module.exports = Electron;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.PhantomBrowser.prototype.start" id="apidoc.element.zuul.PhantomBrowser.prototype.start">
+        function <span class="apidocSignatureSpan">zuul.PhantomBrowser.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    var self = this;
+
+    var phantomjs = getPhantom();
+
+    var binpath = phantomjs.path;
+
+    self.controller = setup_test_instance(self._opt, function(err, url) {
+        if (err) {
+            self.emit(&#x27;error&#x27;, err);
+            self.emit(&#x27;done&#x27;, {
+                passed: false
+            });
+        }
+
+        debug(&#x27;url %s&#x27;, url);
+
+        var reporter = new EventEmitter();
+
+        reporter.on(&#x27;console&#x27;, function(msg) {
+            console.log.apply(console, msg.args);
+        });
+
+        reporter.on(&#x27;test&#x27;, function(test) {
+            console.log(&#x27;starting&#x27;, test.name.white);
+        });
+
+        reporter.on(&#x27;test_end&#x27;, function(test) {
+            if (!test.passed) {
+                console.log(&#x27;failed&#x27;, test.name.red);
+                return self.status.failed++;
+            }
+
+            console.log(&#x27;passed:&#x27;, test.name.green);
+            self.status.passed++;
+        });
+
+        reporter.on(&#x27;assertion&#x27;, function(assertion) {
+            console.log(&#x27;Error: %s&#x27;.red, assertion.message);
+            assertion.frames.forEach(function(frame) {
+                console.log(&#x27;    %s %s:%d&#x27;.grey, frame.func, frame.filename, frame.line);
+            });
+            console.log();
+        });
+
+        reporter.on(&#x27;done&#x27;, function() {
+            reporter.removeAllListeners();
+        });
+
+        self.emit(&#x27;init&#x27;, url);
+        self.emit(&#x27;start&#x27;, reporter);
+
+        var debugArgs = [
+            self._opt.phantomRemoteDebuggerPort ? &#x27;--remote-debugger-port=&#x27; + self._opt.phantomRemoteDebuggerPort : &#x27;&#x27;,
+            self._opt.phantomRemoteDebuggerAutorun ? &#x27;--remote-debugger-autorun=true&#x27; : &#x27;&#x27;
+        ].filter(Boolean);
+
+        var args = debugArgs.concat([path.join(__dirname, &#x27;phantom-run.js&#x27;), url]);
+        var cp = spawn(binpath, args);
+
+        var split = Split();
+        split.on(&#x27;data&#x27;, function(line) {
+            var msg;
+            try {
+                msg = JSON.parse(line);
+            } catch (err) {
+                self.emit(&#x27;error&#x27;, new Error(&#x27;failed to parse json: &#x27; + line));
+                return;
+            }
+
+            debug(&#x27;msg: %j&#x27;, msg);
+
+            if (msg.type === &#x27;exception&#x27;) {
+                self.emit(&#x27;error&#x27;, new Error(msg.message));
+            } else {
+                reporter.emit(msg.type, msg);
+            }
+        });
+
+        cp.stdout.setEncoding(&#x27;utf8&#x27;);
+        cp.stdout.pipe(split);
+
+        cp.stderr.on(&#x27;data&#x27;, function (data) {
+            console.error(&#x27;phantom stderr: &#x27;.red + data);
+        });
+
+        cp.on(&#x27;close&#x27;, function (code) {
+            self.emit(&#x27;done&#x27;, {
+                passed: self.status.passed,
+                failed: self.status.failed
+            });
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this.started = false;
+this.finished = false;
+
+this.jasmineStarted = function() {
+  this.started = true;
+  status = &#x27;started&#x27;;
+  timer.<span class="apidocCodeKeywordSpan">start</span>();
+};
+
+var executionTime;
+
+this.jasmineDone = function() {
+  this.finished = true;
+  executionTime = timer.elapsed();
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.SauceBrowser" id="apidoc.module.zuul.SauceBrowser">module zuul.SauceBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.SauceBrowser.SauceBrowser" id="apidoc.element.zuul.SauceBrowser.SauceBrowser">
+        function <span class="apidocSignatureSpan">zuul.</span>SauceBrowser
+        <span class="apidocSignatureSpan">(conf, opt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SauceBrowser(conf, opt) {
+    if (!(this instanceof SauceBrowser)) {
+        return new SauceBrowser(conf, opt);
+    }
+
+    var self = this;
+    self._conf = conf;
+    self._opt = opt;
+    self._opt.tunnel = (opt.sauce_connect) ? false : (self._opt.tunnel || true);
+    self.stats = {
+        passed: 0,
+        failed: 0
+    };
+    self.debug = debug(&#x27;zuul:sauce:&#x27; + conf.browser + &#x27;:&#x27; + conf.version);
+    self.debug(&#x27;browser conf: %j&#x27;, omit(conf, [&#x27;username&#x27;, &#x27;key&#x27;]));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.SauceBrowser.prototype" id="apidoc.module.zuul.SauceBrowser.prototype">module zuul.SauceBrowser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.SauceBrowser.prototype.shutdown" id="apidoc.element.zuul.SauceBrowser.prototype.shutdown">
+        function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>shutdown
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">shutdown = function (err) {
+    var self = this;
+
+    clearTimeout(self.noOutputTimeout);
+
+    self.stopped = true;
+
+    var finish_shutdown = function () {
+        self.debug(&#x27;shutdown&#x27;);
+
+        if (self.controller) {
+            self.controller.shutdown();
+        }
+
+        if (err) {
+            // prefix browser err message with browser version
+            err.message = self._conf.browser + &#x27;@&#x27; + self._conf.version + &#x27;: &#x27; + err.message;
+            self.emit(&#x27;error&#x27;, err);
+            return;
+        }
+
+        self.emit(&#x27;done&#x27;, self.stats);
+        self.removeAllListeners();
+    }
+
+    // make sure the browser shuts down before continuing
+    if (self.browser) {
+        self.debug(&#x27;quitting browser&#x27;);
+
+        var timeout = false;
+        var quit_timeout = setTimeout(function() {
+            self.debug(&#x27;timed out waiting for browser to quit&#x27;);
+            timeout = true;
+            finish_shutdown();
+        }, 10 * 1000);
+
+        self.browser.quit(function(err) {
+            if (timeout) {
+                return;
+            }
+
+            clearTimeout(quit_timeout);
+            finish_shutdown();
+        });
+    }
+    else {
+        finish_shutdown();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            });
+        });
+    });
+};
+
+Electron.prototype.shutdown = function() {
+    if (self.controller) {
+        self.controller.<span class="apidocCodeKeywordSpan">shutdown</span>();
+    }
+};
+
+module.exports = Electron;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.SauceBrowser.prototype.start" id="apidoc.element.zuul.SauceBrowser.prototype.start">
+        function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    var self = this;
+    var conf = self._conf;
+
+    self.stopped = false;
+    self.stats = {
+        passed: 0,
+        failed: 0
+    };
+
+    self.debug(&#x27;running&#x27;);
+    var browser = self.browser = wd.remote(&#x27;ondemand.saucelabs.com&#x27;, 80, conf.username, conf.key);
+
+    self.controller = setup_test_instance(self._opt, function(err, url) {
+        if (err) {
+            return self.shutdown(err);
+        }
+
+        self.emit(&#x27;init&#x27;, conf);
+
+        var init_conf = xtend({
+            build: conf.build,
+            name: conf.name,
+            tags: conf.tags || [],
+            browserName: conf.browser,
+            version: conf.version,
+            platform: conf.platform
+        }, conf.capabilities);
+
+        // use the SAUCE_APPIUM_VERSION environment variable to specify the
+        // Appium version. If not specified the test will run against the
+        // default Appium version
+        if (process.env.SAUCE_APPIUM_VERSION) {
+            init_conf[&#x27;appium-version&#x27;] = process.env.SAUCE_APPIUM_VERSION;
+        }
+
+        // configures sauce connect with a tunnel identifier
+        // if sauce_connect is true, use the TRAVIS_JOB_NUMBER environment variable
+        // otherwise use the contents of the sauce_connect variable
+        if (self._opt.sauce_connect) {
+            var tunnelId = self._opt.sauce_connect !== true ? self._opt.sauce_connect : process.env.TRAVIS_JOB_NUMBER;
+            if (tunnelId) {
+                init_conf[&#x27;tunnel-identifier&#x27;] = tunnelId;
+            }
+        }
+
+        if (conf.firefox_profile) {
+            var fp = new FirefoxProfile();
+            var extensions = conf.firefox_profile.extensions;
+            for (var preference in conf.firefox_profile) {
+                if (preference !== &#x27;extensions&#x27;) {
+                    fp.setPreference(preference, conf.firefox_profile[preference]);
+                }
+            }
+            extensions = extensions ? extensions : [];
+            fp.addExtensions(extensions, function () {
+                fp.encoded(function(zippedProfile) {
+                    init_conf.firefox_profile = zippedProfile;
+                    init();
+                });
+            });
+        } else {
+            init();
+        }
+
+        function init() {
+            self.debug(&#x27;queuing&#x27;);
+
+            browser.init(init_conf, function(err) {
+                if (err) {
+                    if (err.data) {
+                        err.message += &#x27;: &#x27; + err.data.split(&#x27;\n&#x27;).slice(0, 1);
+                    }
+                    return self.shutdown(err);
+                }
+
+                var reporter = new EventEmitter();
+
+                reporter.on(&#x27;test_end&#x27;, function(test) {
+                    if (!test.passed) {
+                        return self.stats.failed++;
+                    }
+                    self.stats.passed++;
+                });
+
+                reporter.on(&#x27;done&#x27;, function(results) {
+                    clearTimeout(self.noOutputTimeout);
+                    self.debug(&#x27;done&#x27;);
+                    var passed = results.passed;
+                    var called = false;
+                    browser.sauceJobStatus(passed, function(err) {
+                        if (called) {
+                            return;
+                        }
+
+                        called = true;
+                        self.shutdown();
+
+                        if (err) {
+                            return;
+                            // don&#x27;t let this error fail us
+                        }
+                    });
+
+                    reporter.removeAllListeners();
+                });
+
+                self.debug(&#x27;open %s&#x27;, url);
+                self.emit(&#x27;start&#x27;, reporter);
+
+                var timeout = false;
+                var get_timeout = setTimeout(function() {
+                    self.debug(&#x27;timed out waiting for open %s&#x27;, url);
+                    timeout = true;
+                    self.shutdown(new Error(&#x27;Timeout opening url after &#x27; + Math.round(self._opt.browser_open_timeout/1000) + &#x27;s&#x27;));
+                }, self._opt.browser_open_timeout); ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+this.started = false;
+this.finished = false;
+
+this.jasmineStarted = function() {
+  this.started = true;
+  status = &#x27;started&#x27;;
+  timer.<span class="apidocCodeKeywordSpan">start</span>();
+};
+
+var executionTime;
+
+this.jasmineDone = function() {
+  this.finished = true;
+  executionTime = timer.elapsed();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.SauceBrowser.prototype.toString" id="apidoc.element.zuul.SauceBrowser.prototype.toString">
+        function <span class="apidocSignatureSpan">zuul.SauceBrowser.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    var self = this;
+    var conf = self._conf;
+    return &#x27;&#x3c;&#x27; + conf.browser + &#x27; &#x27; + conf.version + &#x27; on &#x27; + conf.platform + &#x27;&#x3e;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return function(cb) {
+        var start = Date.now();
+        watchifyBundler.bundle(function(err, buf) {
+if (err) {
+    return cb(err);
+}
+
+var src = buf.<span class="apidocCodeKeywordSpan">toString</span>();
+var srcmap = convert.fromSource(src);
+var map = undefined;
+src = convert.removeComments(src);
+
+if (srcmap) {
+    map = srcmap.toObject();
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.framework" id="apidoc.module.zuul.framework">module zuul.framework</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Any" id="apidoc.element.zuul.framework.Any">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Any
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Any = function () {
+
+  function Any(expectedObject) {
+    this.expectedObject = expectedObject;
+  }
+
+  Any.prototype.asymmetricMatch = function(other) {
+    if (this.expectedObject == String) {
+      return typeof other == &#x27;string&#x27; || other instanceof String;
+    }
+
+    if (this.expectedObject == Number) {
+      return typeof other == &#x27;number&#x27; || other instanceof Number;
+    }
+
+    if (this.expectedObject == Function) {
+      return typeof other == &#x27;function&#x27; || other instanceof Function;
+    }
+
+    if (this.expectedObject == Object) {
+      return typeof other == &#x27;object&#x27;;
+    }
+
+    if (this.expectedObject == Boolean) {
+      return typeof other == &#x27;boolean&#x27;;
+    }
+
+    return other instanceof this.expectedObject;
+  };
+
+  Any.prototype.jasmineToString = function() {
+    return &#x27;&#x3c;jasmine.any(&#x27; + this.expectedObject + &#x27;)&#x3e;&#x27;;
+  };
+
+  return Any;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  getJasmineRequire().core = function(jRequire) {
+var j$ = {};
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.<span class="apidocCodeKeywordSpan">Any</span>();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Anything" id="apidoc.element.zuul.framework.Anything">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Anything
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Anything = function (j$) {
+
+  function Anything() {}
+
+  Anything.prototype.asymmetricMatch = function(other) {
+    return !j$.util.isUndefined(other) &#x26;&#x26; other !== null;
+  };
+
+  Anything.prototype.jasmineToString = function() {
+    return &#x27;&#x3c;jasmine.anything&#x3e;&#x27;;
+  };
+
+  return Anything;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  getJasmineRequire().core = function(jRequire) {
+var j$ = {};
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.<span class="apidocCodeKeywordSpan">Anything</span>(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.ArrayContaining" id="apidoc.element.zuul.framework.ArrayContaining">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>ArrayContaining
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ArrayContaining = function (j$) {
+  function ArrayContaining(sample) {
+    this.sample = sample;
+  }
+
+  ArrayContaining.prototype.asymmetricMatch = function(other) {
+    var className = Object.prototype.toString.call(this.sample);
+    if (className !== &#x27;[object Array]&#x27;) { throw new Error(&#x27;You must provide an array to arrayContaining, not \&#x27;&#x27; + this.sample + &#x27;\&#x27;.&#x27;); }
+
+    for (var i = 0; i &#x3c; this.sample.length; i++) {
+      var item = this.sample[i];
+      if (!j$.matchersUtil.contains(other, item)) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  ArrayContaining.prototype.jasmineToString = function () {
+    return &#x27;&#x3c;jasmine.arrayContaining(&#x27; + jasmine.pp(this.sample) +&#x27;)&#x3e;&#x27;;
+  };
+
+  return ArrayContaining;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.<span class="apidocCodeKeywordSpan">ArrayContaining</span>(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.CallTracker" id="apidoc.element.zuul.framework.CallTracker">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>CallTracker
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CallTracker = function () {
+
+  function CallTracker() {
+    var calls = [];
+
+    this.track = function(context) {
+      calls.push(context);
+    };
+
+    this.any = function() {
+      return !!calls.length;
+    };
+
+    this.count = function() {
+      return calls.length;
+    };
+
+    this.argsFor = function(index) {
+      var call = calls[index];
+      return call ? call.args : [];
+    };
+
+    this.all = function() {
+      return calls;
+    };
+
+    this.allArgs = function() {
+      var callArgs = [];
+      for(var i = 0; i &#x3c; calls.length; i++){
+        callArgs.push(calls[i].args);
+      }
+
+      return callArgs;
+    };
+
+    this.first = function() {
+      return calls[0];
+    };
+
+    this.mostRecent = function() {
+      return calls[calls.length - 1];
+    };
+
+    this.reset = function() {
+      calls = [];
+    };
+  }
+
+  return CallTracker;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  getJasmineRequire().core = function(jRequire) {
+var j$ = {};
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.<span class="apidocCodeKeywordSpan">CallTracker</span>();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Clock" id="apidoc.element.zuul.framework.Clock">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Clock
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Clock = function () {
+  function Clock(global, delayedFunctionScheduler, mockDate) {
+    var self = this,
+      realTimingFunctions = {
+        setTimeout: global.setTimeout,
+        clearTimeout: global.clearTimeout,
+        setInterval: global.setInterval,
+        clearInterval: global.clearInterval
+      },
+      fakeTimingFunctions = {
+        setTimeout: setTimeout,
+        clearTimeout: clearTimeout,
+        setInterval: setInterval,
+        clearInterval: clearInterval
+      },
+      installed = false,
+      timer;
+
+
+    self.install = function() {
+      replace(global, fakeTimingFunctions);
+      timer = fakeTimingFunctions;
+      installed = true;
+
+      return self;
+    };
+
+    self.uninstall = function() {
+      delayedFunctionScheduler.reset();
+      mockDate.uninstall();
+      replace(global, realTimingFunctions);
+
+      timer = realTimingFunctions;
+      installed = false;
+    };
+
+    self.mockDate = function(initialDate) {
+      mockDate.install(initialDate);
+    };
+
+    self.setTimeout = function(fn, delay, params) {
+      if (legacyIE()) {
+        if (arguments.length &#x3e; 2) {
+          throw new Error(&#x27;IE &#x3c; 9 cannot support extra params to setTimeout without a polyfill&#x27;);
+        }
+        return timer.setTimeout(fn, delay);
+      }
+      return Function.prototype.apply.apply(timer.setTimeout, [global, arguments]);
+    };
+
+    self.setInterval = function(fn, delay, params) {
+      if (legacyIE()) {
+        if (arguments.length &#x3e; 2) {
+          throw new Error(&#x27;IE &#x3c; 9 cannot support extra params to setInterval without a polyfill&#x27;);
+        }
+        return timer.setInterval(fn, delay);
+      }
+      return Function.prototype.apply.apply(timer.setInterval, [global, arguments]);
+    };
+
+    self.clearTimeout = function(id) {
+      return Function.prototype.call.apply(timer.clearTimeout, [global, id]);
+    };
+
+    self.clearInterval = function(id) {
+      return Function.prototype.call.apply(timer.clearInterval, [global, id]);
+    };
+
+    self.tick = function(millis) {
+      if (installed) {
+        mockDate.tick(millis);
+        delayedFunctionScheduler.tick(millis);
+      } else {
+        throw new Error(&#x27;Mock clock is not installed, use jasmine.clock().install()&#x27;);
+      }
+    };
+
+    return self;
+
+    function legacyIE() {
+      //if these methods are polyfilled, apply will be present
+      return !(realTimingFunctions.setTimeout || realTimingFunctions.setInterval).apply;
+    }
+
+    function replace(dest, source) {
+      for (var prop in source) {
+        dest[prop] = source[prop];
+      }
+    }
+
+    function setTimeout(fn, delay) {
+      return delayedFunctionScheduler.scheduleFunction(fn, delay, argSlice(arguments, 2));
+    }
+
+    function clearTimeout(id) {
+      return delayedFunctionScheduler.removeFunctionWithId(id);
+    }
+
+    function setInterval(fn, interval) {
+      return delayedFunctionScheduler.scheduleFunction(fn, interval, argSlice(arguments, 2), true);
+    }
+
+    function clearInterval(id) {
+      return delayedFunctionScheduler.removeFunctionWithId(id);
+    }
+
+    function argSlice(argsObj, n) {
+      return Array.prototype.slice.call(argsObj, n);
+    }
+  }
+
+  return Clock;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.<span class="apidocCodeKeywordSpan">Clock</span>();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.DelayedFunctionScheduler" id="apidoc.element.zuul.framework.DelayedFunctionScheduler">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>DelayedFunctionScheduler
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DelayedFunctionScheduler = function () {
+  function DelayedFunctionScheduler() {
+    var self = this;
+    var scheduledLookup = [];
+    var scheduledFunctions = {};
+    var currentTime = 0;
+    var delayedFnCount = 0;
+
+    self.tick = function(millis) {
+      millis = millis || 0;
+      var endTime = currentTime + millis;
+
+      runScheduledFunctions(endTime);
+      currentTime = endTime;
+    };
+
+    self.scheduleFunction = function(funcToCall, millis, params, recurring, timeoutKey, runAtMillis) {
+      var f;
+      if (typeof(funcToCall) === &#x27;string&#x27;) {
+<span class="apidocCodeCommentSpan">        /* jshint evil: true */
+</span>        f = function() { return eval(funcToCall); };
+        /* jshint evil: false */
+      } else {
+        f = funcToCall;
+      }
+
+      millis = millis || 0;
+      timeoutKey = timeoutKey || ++delayedFnCount;
+      runAtMillis = runAtMillis || (currentTime + millis);
+
+      var funcToSchedule = {
+        runAtMillis: runAtMillis,
+        funcToCall: f,
+        recurring: recurring,
+        params: params,
+        timeoutKey: timeoutKey,
+        millis: millis
+      };
+
+      if (runAtMillis in scheduledFunctions) {
+        scheduledFunctions[runAtMillis].push(funcToSchedule);
+      } else {
+        scheduledFunctions[runAtMillis] = [funcToSchedule];
+        scheduledLookup.push(runAtMillis);
+        scheduledLookup.sort(function (a, b) {
+          return a - b;
+        });
+      }
+
+      return timeoutKey;
+    };
+
+    self.removeFunctionWithId = function(timeoutKey) {
+      for (var runAtMillis in scheduledFunctions) {
+        var funcs = scheduledFunctions[runAtMillis];
+        var i = indexOfFirstToPass(funcs, function (func) {
+          return func.timeoutKey === timeoutKey;
+        });
+
+        if (i &#x3e; -1) {
+          if (funcs.length === 1) {
+            delete scheduledFunctions[runAtMillis];
+            deleteFromLookup(runAtMillis);
+          } else {
+            funcs.splice(i, 1);
+          }
+
+          // intervals get rescheduled when executed, so there&#x27;s never more
+          // than a single scheduled function with a given timeoutKey
+          break;
+        }
+      }
+    };
+
+    self.reset = function() {
+      currentTime = 0;
+      scheduledLookup = [];
+      scheduledFunctions = {};
+      delayedFnCount = 0;
+    };
+
+    return self;
+
+    function indexOfFirstToPass(array, testFn) {
+      var index = -1;
+
+      for (var i = 0; i &#x3c; array.length; ++i) {
+        if (testFn(array[i])) {
+          index = i;
+          break;
+        }
+      }
+
+      return index;
+    }
+
+    function deleteFromLookup(key) {
+      var value = Number(key);
+      var i = indexOfFirstToPass(scheduledLookup, function (millis) {
+        return millis === value;
+      });
+
+      if (i &#x3e; -1) {
+        scheduledLookup.splice(i, 1);
+      }
+    }
+
+    function reschedule(scheduledFn) {
+      self.scheduleFunction(scheduledFn.funcToCall,
+        scheduledFn.millis,
+        scheduledFn.params,
+        true,
+        scheduledFn.timeoutKey,
+        scheduledFn.runAtMillis + scheduledFn.millis);
+    }
+
+    function forEachFunction(funcsToRun, callback) {
+      for (var i = 0; i &#x3c; funcsToRun.length; ++i) {
+        callback(funcsToRun[i]);
+      }
+    }
+
+    function runScheduledFunctions(endTime) {
+      if (scheduledLookup.length === 0 || scheduledLookup[0] &#x3e; endTime) {
+        return;
+      }
+
+      do {
+        currentTime = scheduledLookup.shift();
+
+        var funcsToRun = scheduledFunctions[currentTime];
+        delete scheduledFunctions[currentTime];
+
+        forEachFunction(funcsToRun, function(funcToRun) {
+          if (funcToRun.recurring) {
+            reschedule(funcToRun);
+          }
+        });
+
+        forEachFunction(funcsToRun, function(funcToRun) {
+          funcToRun.funcToCall.apply(null, funcToRun.params || []);
+        });
+      } while (scheduledLookup.length &#x3e; 0 &#x26;&#x26;
+              // checking first if we&#x27;re out of time prevents setTimeout(0)
+              // scheduled in a funcToRun from forcing an extra iteration
+                 currentTime !== endTime  &#x26;&#x26;
+                 scheduledLookup[0] &#x3c;= endTime);
+    }
+  }
+
+  return DelayedFunctionScheduler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.<span class="apidocCodeKeywordSpan">DelayedFunctionScheduler</span>();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Env" id="apidoc.element.zuul.framework.Env">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Env
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Env = function (j$) {
+  function Env(options) {
+    options = options || {};
+
+    var self = this;
+    var global = options.global || j$.getGlobal();
+
+    var totalSpecsDefined = 0;
+
+    var catchExceptions = true;
+
+    var realSetTimeout = j$.getGlobal().setTimeout;
+    var realClearTimeout = j$.getGlobal().clearTimeout;
+    this.clock = new j$.Clock(global, new j$.DelayedFunctionScheduler(), new j$.MockDate(global));
+
+    var runnableLookupTable = {};
+    var runnableResources = {};
+
+    var currentSpec = null;
+    var currentlyExecutingSuites = [];
+    var currentDeclarationSuite = null;
+
+    var currentSuite = function() {
+      return currentlyExecutingSuites[currentlyExecutingSuites.length - 1];
+    };
+
+    var currentRunnable = function() {
+      return currentSpec || currentSuite();
+    };
+
+    var reporter = new j$.ReportDispatcher([
+      &#x27;jasmineStarted&#x27;,
+      &#x27;jasmineDone&#x27;,
+      &#x27;suiteStarted&#x27;,
+      &#x27;suiteDone&#x27;,
+      &#x27;specStarted&#x27;,
+      &#x27;specDone&#x27;
+    ]);
+
+    this.specFilter = function() {
+      return true;
+    };
+
+    this.addCustomEqualityTester = function(tester) {
+      if(!currentRunnable()) {
+        throw new Error(&#x27;Custom Equalities must be added in a before function or a spec&#x27;);
+      }
+      runnableResources[currentRunnable().id].customEqualityTesters.push(tester);
+    };
+
+    this.addMatchers = function(matchersToAdd) {
+      if(!currentRunnable()) {
+        throw new Error(&#x27;Matchers must be added in a before function or a spec&#x27;);
+      }
+      var customMatchers = runnableResources[currentRunnable().id].customMatchers;
+      for (var matcherName in matchersToAdd) {
+        customMatchers[matcherName] = matchersToAdd[matcherName];
+      }
+    };
+
+    j$.Expectation.addCoreMatchers(j$.matchers);
+
+    var nextSpecId = 0;
+    var getNextSpecId = function() {
+      return &#x27;spec&#x27; + nextSpecId++;
+    };
+
+    var nextSuiteId = 0;
+    var getNextSuiteId = function() {
+      return &#x27;suite&#x27; + nextSuiteId++;
+    };
+
+    var expectationFactory = function(actual, spec) {
+      return j$.Expectation.Factory({
+        util: j$.matchersUtil,
+        customEqualityTesters: runnableResources[spec.id].customEqualityTesters,
+        customMatchers: runnableResources[spec.id].customMatchers,
+        actual: actual,
+        addExpectationResult: addExpectationResult
+      });
+
+      function addExpectationResult(passed, result) {
+        return spec.addExpectationResult(passed, result);
+      }
+    };
+
+    var defaultResourcesForRunnable = function(id, parentRunnableId) {
+      var resources = {spies: [], customEqualityTesters: [], customMatchers: {}};
+
+      if(runnableResources[parentRunnableId]){
+        resources.customEqualityTesters = j$.util.clone(runnableResources[parentRunnableId].customEqualityTesters);
+        resources.customMatchers = j$.util.clone(runnableResources[parentRunnableId].customMatchers);
+      }
+
+      runnableResources[id] = resources;
+    };
+
+    var clearResourcesForRunnable = function(id) {
+        spyRegistry.clearSpies();
+        delete runnableResources[id];
+    };
+
+    var beforeAndAfterFns = function(suite, runnablesExplictlySet) {
+      return function() {
+        var befores = [],
+          afters = [],
+          beforeAlls = [],
+          afterAlls = [];
+
+        while(suite) {
+          befores = befores.concat(suite.beforeFns);
+          afters = afters.concat(suite.afterFns);
+
+          if (runnablesExplictlySet()) {
+            beforeAlls = beforeAlls.concat(suite.beforeAllFns);
+            afterAlls = afterAlls.concat(suite.afterAllFns);
+          }
+
+          suite = suite.parentSuite;
+        }
+        return {
+          befores: beforeAlls.reverse().concat(befores.reverse()),
+          afters: afters.concat(afterAlls)
+        };
+      };
+    };
+
+    var getSpecName = function(spec, suite) {
+      return suite.getFullName() + &#x27; &#x27; + spec.description;
+    };
+
+    // TODO: we may just be able to pass in the fn instead of wrapping here
+    var buildExpectationResult = j$.buildExpectationResult,
+        exceptionFormatter = new j$.ExceptionFormatter(),
+        expectationResultF ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.<span class="apidocCodeKeywordSpan">Env</span>(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.ExceptionFormatter" id="apidoc.element.zuul.framework.ExceptionFormatter">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>ExceptionFormatter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ExceptionFormatter = function () {
+  function ExceptionFormatter() {
+    this.message = function(error) {
+      var message = &#x27;&#x27;;
+
+      if (error.name &#x26;&#x26; error.message) {
+        message += error.name + &#x27;: &#x27; + error.message;
+      } else {
+        message += error.toString() + &#x27; thrown&#x27;;
+      }
+
+      if (error.fileName || error.sourceURL) {
+        message += &#x27; in &#x27; + (error.fileName || error.sourceURL);
+      }
+
+      if (error.line || error.lineNumber) {
+        message += &#x27; (line &#x27; + (error.line || error.lineNumber) + &#x27;)&#x27;;
+      }
+
+      return message;
+    };
+
+    this.stack = function(error) {
+      return error ? error.stack : null;
+    };
+  }
+
+  return ExceptionFormatter;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.<span class="apidocCodeKeywordSpan">ExceptionFormatter</span>();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Expectation" id="apidoc.element.zuul.framework.Expectation">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Expectation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Expectation = function () {
+
+  function Expectation(options) {
+    this.util = options.util || { buildFailureMessage: function() {} };
+    this.customEqualityTesters = options.customEqualityTesters || [];
+    this.actual = options.actual;
+    this.addExpectationResult = options.addExpectationResult || function(){};
+    this.isNot = options.isNot;
+
+    var customMatchers = options.customMatchers || {};
+    for (var matcherName in customMatchers) {
+      this[matcherName] = Expectation.prototype.wrapCompare(matcherName, customMatchers[matcherName]);
+    }
+  }
+
+  Expectation.prototype.wrapCompare = function(name, matcherFactory) {
+    return function() {
+      var args = Array.prototype.slice.call(arguments, 0),
+        expected = args.slice(0),
+        message = &#x27;&#x27;;
+
+      args.unshift(this.actual);
+
+      var matcher = matcherFactory(this.util, this.customEqualityTesters),
+          matcherCompare = matcher.compare;
+
+      function defaultNegativeCompare() {
+        var result = matcher.compare.apply(null, args);
+        result.pass = !result.pass;
+        return result;
+      }
+
+      if (this.isNot) {
+        matcherCompare = matcher.negativeCompare || defaultNegativeCompare;
+      }
+
+      var result = matcherCompare.apply(null, args);
+
+      if (!result.pass) {
+        if (!result.message) {
+          args.unshift(this.isNot);
+          args.unshift(name);
+          message = this.util.buildFailureMessage.apply(null, args);
+        } else {
+          if (Object.prototype.toString.apply(result.message) === &#x27;[object Function]&#x27;) {
+            message = result.message();
+          } else {
+            message = result.message;
+          }
+        }
+      }
+
+      if (expected.length == 1) {
+        expected = expected[0];
+      }
+
+      // TODO: how many of these params are needed?
+      this.addExpectationResult(
+        result.pass,
+        {
+          matcherName: name,
+          passed: result.pass,
+          message: message,
+          actual: this.actual,
+          expected: expected // TODO: this may need to be arrayified/sliced
+        }
+      );
+    };
+  };
+
+  Expectation.addCoreMatchers = function(matchers) {
+    var prototype = Expectation.prototype;
+    for (var matcherName in matchers) {
+      var matcher = matchers[matcherName];
+      prototype[matcherName] = prototype.wrapCompare(matcherName, matcher);
+    }
+  };
+
+  Expectation.Factory = function(options) {
+    options = options || {};
+
+    var expect = new Expectation(options);
+
+    // TODO: this would be nice as its own Object - NegativeExpectation
+    // TODO: copy instead of mutate options
+    options.isNot = true;
+    expect.not = new Expectation(options);
+
+    return expect;
+  };
+
+  return Expectation;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.<span class="apidocCodeKeywordSpan">Expectation</span>();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.JsApiReporter" id="apidoc.element.zuul.framework.JsApiReporter">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>JsApiReporter
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsApiReporter = function () {
+
+  var noopTimer = {
+    start: function(){},
+    elapsed: function(){ return 0; }
+  };
+
+  function JsApiReporter(options) {
+    var timer = options.timer || noopTimer,
+        status = &#x27;loaded&#x27;;
+
+    this.started = false;
+    this.finished = false;
+
+    this.jasmineStarted = function() {
+      this.started = true;
+      status = &#x27;started&#x27;;
+      timer.start();
+    };
+
+    var executionTime;
+
+    this.jasmineDone = function() {
+      this.finished = true;
+      executionTime = timer.elapsed();
+      status = &#x27;done&#x27;;
+    };
+
+    this.status = function() {
+      return status;
+    };
+
+    var suites = [],
+      suites_hash = {};
+
+    this.suiteStarted = function(result) {
+      suites_hash[result.id] = result;
+    };
+
+    this.suiteDone = function(result) {
+      storeSuite(result);
+    };
+
+    this.suiteResults = function(index, length) {
+      return suites.slice(index, index + length);
+    };
+
+    function storeSuite(result) {
+      suites.push(result);
+      suites_hash[result.id] = result;
+    }
+
+    this.suites = function() {
+      return suites_hash;
+    };
+
+    var specs = [];
+
+    this.specDone = function(result) {
+      specs.push(result);
+    };
+
+    this.specResults = function(index, length) {
+      return specs.slice(index, index + length);
+    };
+
+    this.specs = function() {
+      return specs;
+    };
+
+    this.executionTime = function() {
+      return executionTime;
+    };
+
+  }
+
+  return JsApiReporter;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.<span class="apidocCodeKeywordSpan">JsApiReporter</span>();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.MockDate" id="apidoc.element.zuul.framework.MockDate">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>MockDate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MockDate = function () {
+  function MockDate(global) {
+    var self = this;
+    var currentTime = 0;
+
+    if (!global || !global.Date) {
+      self.install = function() {};
+      self.tick = function() {};
+      self.uninstall = function() {};
+      return self;
+    }
+
+    var GlobalDate = global.Date;
+
+    self.install = function(mockDate) {
+      if (mockDate instanceof GlobalDate) {
+        currentTime = mockDate.getTime();
+      } else {
+        currentTime = new GlobalDate().getTime();
+      }
+
+      global.Date = FakeDate;
+    };
+
+    self.tick = function(millis) {
+      millis = millis || 0;
+      currentTime = currentTime + millis;
+    };
+
+    self.uninstall = function() {
+      currentTime = 0;
+      global.Date = GlobalDate;
+    };
+
+    createDateProperties();
+
+    return self;
+
+    function FakeDate() {
+      switch(arguments.length) {
+        case 0:
+          return new GlobalDate(currentTime);
+        case 1:
+          return new GlobalDate(arguments[0]);
+        case 2:
+          return new GlobalDate(arguments[0], arguments[1]);
+        case 3:
+          return new GlobalDate(arguments[0], arguments[1], arguments[2]);
+        case 4:
+          return new GlobalDate(arguments[0], arguments[1], arguments[2], arguments[3]);
+        case 5:
+          return new GlobalDate(arguments[0], arguments[1], arguments[2], arguments[3],
+                                arguments[4]);
+        case 6:
+          return new GlobalDate(arguments[0], arguments[1], arguments[2], arguments[3],
+                                arguments[4], arguments[5]);
+        default:
+          return new GlobalDate(arguments[0], arguments[1], arguments[2], arguments[3],
+                                arguments[4], arguments[5], arguments[6]);
+      }
+    }
+
+    function createDateProperties() {
+      FakeDate.prototype = GlobalDate.prototype;
+
+      FakeDate.now = function() {
+        if (GlobalDate.now) {
+          return currentTime;
+        } else {
+          throw new Error(&#x27;Browser does not support Date.now()&#x27;);
+        }
+      };
+
+      FakeDate.toSource = GlobalDate.toSource;
+      FakeDate.toString = GlobalDate.toString;
+      FakeDate.parse = GlobalDate.parse;
+      FakeDate.UTC = GlobalDate.UTC;
+    }
+	}
+
+  return MockDate;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var j$ = {};
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.<span class="apidocCodeKeywordSpan">MockDate</span>();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.ObjectContaining" id="apidoc.element.zuul.framework.ObjectContaining">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>ObjectContaining
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ObjectContaining = function (j$) {
+
+  function ObjectContaining(sample) {
+    this.sample = sample;
+  }
+
+  ObjectContaining.prototype.asymmetricMatch = function(other) {
+    if (typeof(this.sample) !== &#x27;object&#x27;) { throw new Error(&#x27;You must provide an object to objectContaining, not \&#x27;&#x27;+this.sample
++&#x27;\&#x27;.&#x27;); }
+
+    for (var property in this.sample) {
+      if (!Object.prototype.hasOwnProperty.call(other, property) ||
+          !j$.matchersUtil.equals(this.sample[property], other[property])) {
+        return false;
+      }
+    }
+
+    return true;
+  };
+
+  ObjectContaining.prototype.jasmineToString = function() {
+    return &#x27;&#x3c;jasmine.objectContaining(&#x27; + j$.pp(this.sample) + &#x27;)&#x3e;&#x27;;
+  };
+
+  return ObjectContaining;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.<span class="apidocCodeKeywordSpan">ObjectContaining</span>(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.QueueRunner" id="apidoc.element.zuul.framework.QueueRunner">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>QueueRunner
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">QueueRunner = function (j$) {
+
+  function once(fn) {
+    var called = false;
+    return function() {
+      if (!called) {
+        called = true;
+        fn();
+      }
+    };
+  }
+
+  function QueueRunner(attrs) {
+    this.queueableFns = attrs.queueableFns || [];
+    this.onComplete = attrs.onComplete || function() {};
+    this.clearStack = attrs.clearStack || function(fn) {fn();};
+    this.onException = attrs.onException || function() {};
+    this.catchException = attrs.catchException || function() { return true; };
+    this.userContext = attrs.userContext || {};
+    this.timer = attrs.timeout || {setTimeout: setTimeout, clearTimeout: clearTimeout};
+    this.fail = attrs.fail || function() {};
+  }
+
+  QueueRunner.prototype.execute = function() {
+    this.run(this.queueableFns, 0);
+  };
+
+  QueueRunner.prototype.run = function(queueableFns, recursiveIndex) {
+    var length = queueableFns.length,
+      self = this,
+      iterativeIndex;
+
+
+    for(iterativeIndex = recursiveIndex; iterativeIndex &#x3c; length; iterativeIndex++) {
+      var queueableFn = queueableFns[iterativeIndex];
+      if (queueableFn.fn.length &#x3e; 0) {
+        attemptAsync(queueableFn);
+        return;
+      } else {
+        attemptSync(queueableFn);
+      }
+    }
+
+    var runnerDone = iterativeIndex &#x3e;= length;
+
+    if (runnerDone) {
+      this.clearStack(this.onComplete);
+    }
+
+    function attemptSync(queueableFn) {
+      try {
+        queueableFn.fn.call(self.userContext);
+      } catch (e) {
+        handleException(e, queueableFn);
+      }
+    }
+
+    function attemptAsync(queueableFn) {
+      var clearTimeout = function () {
+          Function.prototype.apply.apply(self.timer.clearTimeout, [j$.getGlobal(), [timeoutId]]);
+        },
+        next = once(function () {
+          clearTimeout(timeoutId);
+          self.run(queueableFns, iterativeIndex + 1);
+        }),
+        timeoutId;
+
+      next.fail = function() {
+        self.fail.apply(null, arguments);
+        next();
+      };
+
+      if (queueableFn.timeout) {
+        timeoutId = Function.prototype.apply.apply(self.timer.setTimeout, [j$.getGlobal(), [function() {
+          var error = new Error(&#x27;Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL
+.&#x27;);
+          onException(error, queueableFn);
+          next();
+        }, queueableFn.timeout()]]);
+      }
+
+      try {
+        queueableFn.fn.call(self.userContext, next);
+      } catch (e) {
+        handleException(e, queueableFn);
+        next();
+      }
+    }
+
+    function onException(e, queueableFn) {
+      self.onException(e);
+    }
+
+    function handleException(e, queueableFn) {
+      onException(e, queueableFn);
+      if (!self.catchException(e)) {
+        //TODO: set a var when we catch an exception and
+        //use a finally block to close the loop in a nice way..
+        throw e;
+      }
+    }
+  };
+
+  return QueueRunner;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.<span class="apidocCodeKeywordSpan">QueueRunner</span>(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.ReportDispatcher" id="apidoc.element.zuul.framework.ReportDispatcher">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>ReportDispatcher
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ReportDispatcher = function () {
+  function ReportDispatcher(methods) {
+
+    var dispatchedMethods = methods || [];
+
+    for (var i = 0; i &#x3c; dispatchedMethods.length; i++) {
+      var method = dispatchedMethods[i];
+      this[method] = (function(m) {
+        return function() {
+          dispatch(m, arguments);
+        };
+      }(method));
+    }
+
+    var reporters = [];
+
+    this.addReporter = function(reporter) {
+      reporters.push(reporter);
+    };
+
+    return this;
+
+    function dispatch(method, args) {
+      for (var i = 0; i &#x3c; reporters.length; i++) {
+        var reporter = reporters[i];
+        if (reporter[method]) {
+          reporter[method].apply(reporter, args);
+        }
+      }
+    }
+  }
+
+  return ReportDispatcher;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.<span class="apidocCodeKeywordSpan">ReportDispatcher</span>();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+j$.version = jRequire.version();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Spec" id="apidoc.element.zuul.framework.Spec">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Spec
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Spec = function (j$) {
+  function Spec(attrs) {
+    this.expectationFactory = attrs.expectationFactory;
+    this.resultCallback = attrs.resultCallback || function() {};
+    this.id = attrs.id;
+    this.description = attrs.description || &#x27;&#x27;;
+    this.queueableFn = attrs.queueableFn;
+    this.beforeAndAfterFns = attrs.beforeAndAfterFns || function() { return {befores: [], afters: []}; };
+    this.userContext = attrs.userContext || function() { return {}; };
+    this.onStart = attrs.onStart || function() {};
+    this.getSpecName = attrs.getSpecName || function() { return &#x27;&#x27;; };
+    this.expectationResultFactory = attrs.expectationResultFactory || function() { };
+    this.queueRunnerFactory = attrs.queueRunnerFactory || function() {};
+    this.catchingExceptions = attrs.catchingExceptions || function() { return true; };
+
+    if (!this.queueableFn.fn) {
+      this.pend();
+    }
+
+    this.result = {
+      id: this.id,
+      description: this.description,
+      fullName: this.getFullName(),
+      failedExpectations: [],
+      passedExpectations: [],
+      pendingReason: &#x27;&#x27;
+    };
+  }
+
+  Spec.prototype.addExpectationResult = function(passed, data) {
+    var expectationResult = this.expectationResultFactory(data);
+    if (passed) {
+      this.result.passedExpectations.push(expectationResult);
+    } else {
+      this.result.failedExpectations.push(expectationResult);
+    }
+  };
+
+  Spec.prototype.expect = function(actual) {
+    return this.expectationFactory(actual, this);
+  };
+
+  Spec.prototype.execute = function(onComplete) {
+    var self = this;
+
+    this.onStart(this);
+
+    if (this.markedPending || this.disabled) {
+      complete();
+      return;
+    }
+
+    var fns = this.beforeAndAfterFns();
+    var allFns = fns.befores.concat(this.queueableFn).concat(fns.afters);
+
+    this.queueRunnerFactory({
+      queueableFns: allFns,
+      onException: function() { self.onException.apply(self, arguments); },
+      onComplete: complete,
+      userContext: this.userContext()
+    });
+
+    function complete() {
+      self.result.status = self.status();
+      self.resultCallback(self.result);
+
+      if (onComplete) {
+        onComplete();
+      }
+    }
+  };
+
+  Spec.prototype.onException = function onException(e) {
+    if (Spec.isPendingSpecException(e)) {
+      this.pend(extractCustomPendingMessage(e));
+      return;
+    }
+
+    this.addExpectationResult(false, {
+      matcherName: &#x27;&#x27;,
+      passed: false,
+      expected: &#x27;&#x27;,
+      actual: &#x27;&#x27;,
+      error: e
+    });
+  };
+
+  Spec.prototype.disable = function() {
+    this.disabled = true;
+  };
+
+  Spec.prototype.pend = function(message) {
+    this.markedPending = true;
+    if (message) {
+      this.result.pendingReason = message;
+    }
+  };
+
+  Spec.prototype.status = function() {
+    if (this.disabled) {
+      return &#x27;disabled&#x27;;
+    }
+
+    if (this.markedPending) {
+      return &#x27;pending&#x27;;
+    }
+
+    if (this.result.failedExpectations.length &#x3e; 0) {
+      return &#x27;failed&#x27;;
+    } else {
+      return &#x27;passed&#x27;;
+    }
+  };
+
+  Spec.prototype.isExecutable = function() {
+    return !this.disabled &#x26;&#x26; !this.markedPending;
+  };
+
+  Spec.prototype.getFullName = function() {
+    return this.getSpecName(this);
+  };
+
+  var extractCustomPendingMessage = function(e) {
+    var fullMessage = e.toString(),
+        boilerplateStart = fullMessage.indexOf(Spec.pendingSpecExceptionMessage),
+        boilerplateEnd = boilerplateStart + Spec.pendingSpecExceptionMessage.length;
+
+    return fullMessage.substr(boilerplateEnd);
+  };
+
+  Spec.pendingSpecExceptionMessage = &#x27;=&#x3e; marked Pending&#x27;;
+
+  Spec.isPendingSpecException = function(e) {
+    return !!(e &#x26;&#x26; e.toString &#x26;&#x26; e.toString().indexOf(Spec.pendingSpecExceptionMessage) !== -1);
+  };
+
+  return Spec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.<span class="apidocCodeKeywordSpan">Spec</span>(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+j$.version = jRequire.version();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.SpyRegistry" id="apidoc.element.zuul.framework.SpyRegistry">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>SpyRegistry
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SpyRegistry = function (j$) {
+
+  function SpyRegistry(options) {
+    options = options || {};
+    var currentSpies = options.currentSpies || function() { return []; };
+
+    this.spyOn = function(obj, methodName) {
+      if (j$.util.isUndefined(obj)) {
+        throw new Error(&#x27;spyOn could not find an object to spy upon for &#x27; + methodName + &#x27;()&#x27;);
+      }
+
+      if (j$.util.isUndefined(methodName)) {
+        throw new Error(&#x27;No method name supplied&#x27;);
+      }
+
+      if (j$.util.isUndefined(obj[methodName])) {
+        throw new Error(methodName + &#x27;() method does not exist&#x27;);
+      }
+
+      if (obj[methodName] &#x26;&#x26; j$.isSpy(obj[methodName])) {
+        //TODO?: should this return the current spy? Downside: may cause user confusion about spy state
+        throw new Error(methodName + &#x27; has already been spied upon&#x27;);
+      }
+
+      var spy = j$.createSpy(methodName, obj[methodName]);
+
+      currentSpies().push({
+        spy: spy,
+        baseObj: obj,
+        methodName: methodName,
+        originalValue: obj[methodName]
+      });
+
+      obj[methodName] = spy;
+
+      return spy;
+    };
+
+    this.clearSpies = function() {
+      var spies = currentSpies();
+      for (var i = 0; i &#x3c; spies.length; i++) {
+        var spyEntry = spies[i];
+        spyEntry.baseObj[spyEntry.methodName] = spyEntry.originalValue;
+      }
+    };
+  }
+
+  return SpyRegistry;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.<span class="apidocCodeKeywordSpan">SpyRegistry</span>(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+j$.version = jRequire.version();
+
+j$.matchers = jRequire.requireMatchers(jRequire, j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.SpyStrategy" id="apidoc.element.zuul.framework.SpyStrategy">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>SpyStrategy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">SpyStrategy = function () {
+
+  function SpyStrategy(options) {
+    options = options || {};
+
+    var identity = options.name || &#x27;unknown&#x27;,
+        originalFn = options.fn || function() {},
+        getSpy = options.getSpy || function() {},
+        plan = function() {};
+
+    this.identity = function() {
+      return identity;
+    };
+
+    this.exec = function() {
+      return plan.apply(this, arguments);
+    };
+
+    this.callThrough = function() {
+      plan = originalFn;
+      return getSpy();
+    };
+
+    this.returnValue = function(value) {
+      plan = function() {
+        return value;
+      };
+      return getSpy();
+    };
+
+    this.returnValues = function() {
+      var values = Array.prototype.slice.call(arguments);
+      plan = function () {
+        return values.shift();
+      };
+      return getSpy();
+    };
+
+    this.throwError = function(something) {
+      var error = (something instanceof Error) ? something : new Error(something);
+      plan = function() {
+        throw error;
+      };
+      return getSpy();
+    };
+
+    this.callFake = function(fn) {
+      plan = fn;
+      return getSpy();
+    };
+
+    this.stub = function(fn) {
+      plan = function() {};
+      return getSpy();
+    };
+  }
+
+  return SpyStrategy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.<span class="apidocCodeKeywordSpan">SpyStrategy</span>();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+j$.version = jRequire.version();
+
+j$.matchers = jRequire.requireMatchers(jRequire, j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.StringMatching" id="apidoc.element.zuul.framework.StringMatching">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>StringMatching
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">StringMatching = function (j$) {
+
+  function StringMatching(expected) {
+    if (!j$.isString_(expected) &#x26;&#x26; !j$.isA_(&#x27;RegExp&#x27;, expected)) {
+      throw new Error(&#x27;Expected is not a String or a RegExp&#x27;);
+    }
+
+    this.regexp = new RegExp(expected);
+  }
+
+  StringMatching.prototype.asymmetricMatch = function(other) {
+    return this.regexp.test(other);
+  };
+
+  StringMatching.prototype.jasmineToString = function() {
+    return &#x27;&#x3c;jasmine.stringMatching(&#x27; + this.regexp + &#x27;)&#x3e;&#x27;;
+  };
+
+  return StringMatching;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.<span class="apidocCodeKeywordSpan">StringMatching</span>(j$);
+j$.Suite = jRequire.Suite();
+j$.Timer = jRequire.Timer();
+j$.version = jRequire.version();
+
+j$.matchers = jRequire.requireMatchers(jRequire, j$);
+
+return j$;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Suite" id="apidoc.element.zuul.framework.Suite">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Suite
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Suite = function () {
+  function Suite(attrs) {
+    this.env = attrs.env;
+    this.id = attrs.id;
+    this.parentSuite = attrs.parentSuite;
+    this.description = attrs.description;
+    this.onStart = attrs.onStart || function() {};
+    this.resultCallback = attrs.resultCallback || function() {};
+    this.clearStack = attrs.clearStack || function(fn) {fn();};
+    this.expectationFactory = attrs.expectationFactory;
+    this.expectationResultFactory = attrs.expectationResultFactory;
+    this.runnablesExplictlySetGetter = attrs.runnablesExplictlySetGetter || function() {};
+
+    this.beforeFns = [];
+    this.afterFns = [];
+    this.beforeAllFns = [];
+    this.afterAllFns = [];
+    this.queueRunner = attrs.queueRunner || function() {};
+    this.disabled = false;
+
+    this.children = [];
+
+    this.result = {
+      id: this.id,
+      description: this.description,
+      fullName: this.getFullName(),
+      failedExpectations: []
+    };
+  }
+
+  Suite.prototype.expect = function(actual) {
+    return this.expectationFactory(actual, this);
+  };
+
+  Suite.prototype.getFullName = function() {
+    var fullName = this.description;
+    for (var parentSuite = this.parentSuite; parentSuite; parentSuite = parentSuite.parentSuite) {
+      if (parentSuite.parentSuite) {
+        fullName = parentSuite.description + &#x27; &#x27; + fullName;
+      }
+    }
+    return fullName;
+  };
+
+  Suite.prototype.disable = function() {
+    this.disabled = true;
+  };
+
+  Suite.prototype.beforeEach = function(fn) {
+    this.beforeFns.unshift(fn);
+  };
+
+  Suite.prototype.beforeAll = function(fn) {
+    this.beforeAllFns.push(fn);
+  };
+
+  Suite.prototype.afterEach = function(fn) {
+    this.afterFns.unshift(fn);
+  };
+
+  Suite.prototype.afterAll = function(fn) {
+    this.afterAllFns.push(fn);
+  };
+
+  Suite.prototype.addChild = function(child) {
+    this.children.push(child);
+  };
+
+  Suite.prototype.status = function() {
+    if (this.disabled) {
+      return &#x27;disabled&#x27;;
+    }
+
+    if (this.result.failedExpectations.length &#x3e; 0) {
+      return &#x27;failed&#x27;;
+    } else {
+      return &#x27;finished&#x27;;
+    }
+  };
+
+  Suite.prototype.execute = function(onComplete) {
+    var self = this;
+
+    this.onStart(this);
+
+    if (this.disabled) {
+      complete();
+      return;
+    }
+
+    var allFns = [];
+
+    for (var i = 0; i &#x3c; this.children.length; i++) {
+      allFns.push(wrapChildAsAsync(this.children[i]));
+    }
+
+    if (this.isExecutable()) {
+      allFns = this.beforeAllFns.concat(allFns);
+      allFns = allFns.concat(this.afterAllFns);
+    }
+
+    this.queueRunner({
+      queueableFns: allFns,
+      onComplete: complete,
+      userContext: this.sharedUserContext(),
+      onException: function() { self.onException.apply(self, arguments); }
+    });
+
+    function complete() {
+      self.result.status = self.status();
+      self.resultCallback(self.result);
+
+      if (onComplete) {
+        onComplete();
+      }
+    }
+
+    function wrapChildAsAsync(child) {
+      return { fn: function(done) { child.execute(done); } };
+    }
+  };
+
+  Suite.prototype.isExecutable = function() {
+    var runnablesExplicitlySet = this.runnablesExplictlySetGetter();
+    return !runnablesExplicitlySet &#x26;&#x26; hasExecutableChild(this.children);
+  };
+
+  Suite.prototype.sharedUserContext = function() {
+    if (!this.sharedContext) {
+      this.sharedContext = this.parentSuite ? clone(this.parentSuite.sharedUserContext()) : {};
+    }
+
+    return this.sharedContext;
+  };
+
+  Suite.prototype.clonedSharedUserContext = function() {
+    return clone(this.sharedUserContext());
+  };
+
+  Suite.prototype.onException = function() {
+    if(isAfterAll(this.children)) {
+      var data = {
+        matcherName: &#x27;&#x27;,
+        passed: false,
+        expected: &#x27;&#x27;,
+        actual: &#x27;&#x27;,
+        error: arguments[0]
+      };
+      this.result.failedExpectations.push(this.expectationResultFactory(data));
+    } else {
+      for (var i = 0; i &#x3c; this.children.length; i++) {
+        var child = this.children[i];
+        child.onException.apply(child, arguments);
+      }
+    }
+  };
+
+  Suite.prototype.addExpectationResult = function () {
+    if(isAfterAll(this.children) &#x26;&#x26; is ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  j$.pp = jRequire.pp(j$);
+  j$.QueueRunner = jRequire.QueueRunner(j$);
+  j$.ReportDispatcher = jRequire.ReportDispatcher();
+  j$.Spec = jRequire.Spec(j$);
+  j$.SpyRegistry = jRequire.SpyRegistry(j$);
+  j$.SpyStrategy = jRequire.SpyStrategy();
+  j$.StringMatching = jRequire.StringMatching(j$);
+  j$.Suite = jRequire.<span class="apidocCodeKeywordSpan">Suite</span>();
+  j$.Timer = jRequire.Timer();
+  j$.version = jRequire.version();
+
+  j$.matchers = jRequire.requireMatchers(jRequire, j$);
+
+  return j$;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.Timer" id="apidoc.element.zuul.framework.Timer">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>Timer
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Timer = function () {
+  var defaultNow = (function(Date) {
+    return function() { return new Date().getTime(); };
+  })(Date);
+
+  function Timer(options) {
+    options = options || {};
+
+    var now = options.now || defaultNow,
+      startTime;
+
+    this.start = function() {
+      startTime = now();
+    };
+
+    this.elapsed = function() {
+      return now() - startTime;
+    };
+  }
+
+  return Timer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  j$.QueueRunner = jRequire.QueueRunner(j$);
+  j$.ReportDispatcher = jRequire.ReportDispatcher();
+  j$.Spec = jRequire.Spec(j$);
+  j$.SpyRegistry = jRequire.SpyRegistry(j$);
+  j$.SpyStrategy = jRequire.SpyStrategy();
+  j$.StringMatching = jRequire.StringMatching(j$);
+  j$.Suite = jRequire.Suite();
+  j$.Timer = jRequire.<span class="apidocCodeKeywordSpan">Timer</span>();
+  j$.version = jRequire.version();
+
+  j$.matchers = jRequire.requireMatchers(jRequire, j$);
+
+  return j$;
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.base" id="apidoc.element.zuul.framework.base">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>base
+        <span class="apidocSignatureSpan">(j$, jasmineGlobal)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">base = function (j$, jasmineGlobal) {
+  j$.unimplementedMethod_ = function() {
+    throw new Error(&#x27;unimplemented method&#x27;);
+  };
+
+  j$.MAX_PRETTY_PRINT_DEPTH = 40;
+  j$.MAX_PRETTY_PRINT_ARRAY_LENGTH = 100;
+  j$.DEFAULT_TIMEOUT_INTERVAL = 5000;
+
+  j$.getGlobal = function() {
+    return jasmineGlobal;
+  };
+
+  j$.getEnv = function(options) {
+    var env = j$.currentEnv_ = j$.currentEnv_ || new j$.Env(options);
+    //jasmine. singletons in here (setTimeout blah blah).
+    return env;
+  };
+
+  j$.isArray_ = function(value) {
+    return j$.isA_(&#x27;Array&#x27;, value);
+  };
+
+  j$.isString_ = function(value) {
+    return j$.isA_(&#x27;String&#x27;, value);
+  };
+
+  j$.isNumber_ = function(value) {
+    return j$.isA_(&#x27;Number&#x27;, value);
+  };
+
+  j$.isA_ = function(typeName, value) {
+    return Object.prototype.toString.apply(value) === &#x27;[object &#x27; + typeName + &#x27;]&#x27;;
+  };
+
+  j$.isDomNode = function(obj) {
+    return obj.nodeType &#x3e; 0;
+  };
+
+  j$.fnNameFor = function(func) {
+    return func.name || func.toString().match(/^\s*function\s*(\w*)\s*\(/)[1];
+  };
+
+  j$.any = function(clazz) {
+    return new j$.Any(clazz);
+  };
+
+  j$.anything = function() {
+    return new j$.Anything();
+  };
+
+  j$.objectContaining = function(sample) {
+    return new j$.ObjectContaining(sample);
+  };
+
+  j$.stringMatching = function(expected) {
+    return new j$.StringMatching(expected);
+  };
+
+  j$.arrayContaining = function(sample) {
+    return new j$.ArrayContaining(sample);
+  };
+
+  j$.createSpy = function(name, originalFn) {
+
+    var spyStrategy = new j$.SpyStrategy({
+        name: name,
+        fn: originalFn,
+        getSpy: function() { return spy; }
+      }),
+      callTracker = new j$.CallTracker(),
+      spy = function() {
+        var callData = {
+          object: this,
+          args: Array.prototype.slice.apply(arguments)
+        };
+
+        callTracker.track(callData);
+        var returnValue = spyStrategy.exec.apply(this, arguments);
+        callData.returnValue = returnValue;
+
+        return returnValue;
+      };
+
+    for (var prop in originalFn) {
+      if (prop === &#x27;and&#x27; || prop === &#x27;calls&#x27;) {
+        throw new Error(&#x27;Jasmine spies would overwrite the \&#x27;and\&#x27; and \&#x27;calls\&#x27; properties on the object being spied upon&#x27;);
+      }
+
+      spy[prop] = originalFn[prop];
+    }
+
+    spy.and = spyStrategy;
+    spy.calls = callTracker;
+
+    return spy;
+  };
+
+  j$.isSpy = function(putativeSpy) {
+    if (!putativeSpy) {
+      return false;
+    }
+    return putativeSpy.and instanceof j$.SpyStrategy &#x26;&#x26;
+      putativeSpy.calls instanceof j$.CallTracker;
+  };
+
+  j$.createSpyObj = function(baseName, methodNames) {
+    if (j$.isArray_(baseName) &#x26;&#x26; j$.util.isUndefined(methodNames)) {
+      methodNames = baseName;
+      baseName = &#x27;unknown&#x27;;
+    }
+
+    if (!j$.isArray_(methodNames) || methodNames.length === 0) {
+      throw &#x27;createSpyObj requires a non-empty array of method names to create spies for&#x27;;
+    }
+    var obj = {};
+    for (var i = 0; i &#x3c; methodNames.length; i++) {
+      obj[methodNames[i]] = j$.createSpy(baseName + &#x27;.&#x27; + methodNames[i]);
+    }
+    return obj;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  function getJasmineRequire() {
+return jasmineRequire;
+  }
+
+  getJasmineRequire().core = function(jRequire) {
+var j$ = {};
+
+jRequire.<span class="apidocCodeKeywordSpan">base</span>(j$, jasmineGlobal);
+j$.util = jRequire.util();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.buildExpectationResult" id="apidoc.element.zuul.framework.buildExpectationResult">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>buildExpectationResult
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">buildExpectationResult = function () {
+  function buildExpectationResult(options) {
+    var messageFormatter = options.messageFormatter || function() {},
+      stackFormatter = options.stackFormatter || function() {};
+
+    var result = {
+      matcherName: options.matcherName,
+      message: message(),
+      stack: stack(),
+      passed: options.passed
+    };
+
+    if(!result.passed) {
+      result.expected = options.expected;
+      result.actual = options.actual;
+    }
+
+    return result;
+
+    function message() {
+      if (options.passed) {
+        return &#x27;Passed.&#x27;;
+      } else if (options.message) {
+        return options.message;
+      } else if (options.error) {
+        return messageFormatter(options.error);
+      }
+      return &#x27;&#x27;;
+    }
+
+    function stack() {
+      if (options.passed) {
+        return &#x27;&#x27;;
+      }
+
+      var error = options.error;
+      if (!error) {
+        try {
+          throw new Error(message());
+        } catch (e) {
+          error = e;
+        }
+      }
+      return stackFormatter(error);
+    }
+  }
+
+  return buildExpectationResult;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.<span class="apidocCodeKeywordSpan">buildExpectationResult</span>();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.core" id="apidoc.element.zuul.framework.core">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>core
+        <span class="apidocSignatureSpan">(jRequire)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">core = function (jRequire) {
+  var j$ = {};
+
+  jRequire.base(j$, jasmineGlobal);
+  j$.util = jRequire.util();
+  j$.Any = jRequire.Any();
+  j$.Anything = jRequire.Anything(j$);
+  j$.CallTracker = jRequire.CallTracker();
+  j$.MockDate = jRequire.MockDate();
+  j$.Clock = jRequire.Clock();
+  j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+  j$.Env = jRequire.Env(j$);
+  j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+  j$.Expectation = jRequire.Expectation();
+  j$.buildExpectationResult = jRequire.buildExpectationResult();
+  j$.JsApiReporter = jRequire.JsApiReporter();
+  j$.matchersUtil = jRequire.matchersUtil(j$);
+  j$.ObjectContaining = jRequire.ObjectContaining(j$);
+  j$.ArrayContaining = jRequire.ArrayContaining(j$);
+  j$.pp = jRequire.pp(j$);
+  j$.QueueRunner = jRequire.QueueRunner(j$);
+  j$.ReportDispatcher = jRequire.ReportDispatcher();
+  j$.Spec = jRequire.Spec(j$);
+  j$.SpyRegistry = jRequire.SpyRegistry(j$);
+  j$.SpyStrategy = jRequire.SpyStrategy();
+  j$.StringMatching = jRequire.StringMatching(j$);
+  j$.Suite = jRequire.Suite();
+  j$.Timer = jRequire.Timer();
+  j$.version = jRequire.version();
+
+  j$.matchers = jRequire.requireMatchers(jRequire, j$);
+
+  return j$;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.interface" id="apidoc.element.zuul.framework.interface">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>interface
+        <span class="apidocSignatureSpan">(jasmine, env)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">interface = function (jasmine, env) {
+  var jasmineInterface = {
+    describe: function(description, specDefinitions) {
+      return env.describe(description, specDefinitions);
+    },
+
+    xdescribe: function(description, specDefinitions) {
+      return env.xdescribe(description, specDefinitions);
+    },
+
+    fdescribe: function(description, specDefinitions) {
+      return env.fdescribe(description, specDefinitions);
+    },
+
+    it: function() {
+      return env.it.apply(env, arguments);
+    },
+
+    xit: function() {
+      return env.xit.apply(env, arguments);
+    },
+
+    fit: function() {
+      return env.fit.apply(env, arguments);
+    },
+
+    beforeEach: function() {
+      return env.beforeEach.apply(env, arguments);
+    },
+
+    afterEach: function() {
+      return env.afterEach.apply(env, arguments);
+    },
+
+    beforeAll: function() {
+      return env.beforeAll.apply(env, arguments);
+    },
+
+    afterAll: function() {
+      return env.afterAll.apply(env, arguments);
+    },
+
+    expect: function(actual) {
+      return env.expect(actual);
+    },
+
+    pending: function() {
+      return env.pending.apply(env, arguments);
+    },
+
+    fail: function() {
+      return env.fail.apply(env, arguments);
+    },
+
+    spyOn: function(obj, methodName) {
+      return env.spyOn(obj, methodName);
+    },
+
+    jsApiReporter: new jasmine.JsApiReporter({
+      timer: new jasmine.Timer()
+    }),
+
+    jasmine: jasmine
+  };
+
+  jasmine.addCustomEqualityTester = function(tester) {
+    env.addCustomEqualityTester(tester);
+  };
+
+  jasmine.addMatchers = function(matchers) {
+    return env.addMatchers(matchers);
+  };
+
+  jasmine.clock = function() {
+    return env.clock;
+  };
+
+  return jasmineInterface;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.matchersUtil" id="apidoc.element.zuul.framework.matchersUtil">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>matchersUtil
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matchersUtil = function (j$) {
+  // TODO: what to do about jasmine.pp not being inject? move to JSON.stringify? gut PrettyPrinter?
+
+  return {
+    equals: function(a, b, customTesters) {
+      customTesters = customTesters || [];
+
+      return eq(a, b, [], [], customTesters);
+    },
+
+    contains: function(haystack, needle, customTesters) {
+      customTesters = customTesters || [];
+
+      if ((Object.prototype.toString.apply(haystack) === &#x27;[object Array]&#x27;) ||
+        (!!haystack &#x26;&#x26; !haystack.indexOf))
+      {
+        for (var i = 0; i &#x3c; haystack.length; i++) {
+          if (eq(haystack[i], needle, [], [], customTesters)) {
+            return true;
+          }
+        }
+        return false;
+      }
+
+      return !!haystack &#x26;&#x26; haystack.indexOf(needle) &#x3e;= 0;
+    },
+
+    buildFailureMessage: function() {
+      var args = Array.prototype.slice.call(arguments, 0),
+        matcherName = args[0],
+        isNot = args[1],
+        actual = args[2],
+        expected = args.slice(3),
+        englishyPredicate = matcherName.replace(/[A-Z]/g, function(s) { return &#x27; &#x27; + s.toLowerCase(); });
+
+      var message = &#x27;Expected &#x27; +
+        j$.pp(actual) +
+        (isNot ? &#x27; not &#x27; : &#x27; &#x27;) +
+        englishyPredicate;
+
+      if (expected.length &#x3e; 0) {
+        for (var i = 0; i &#x3c; expected.length; i++) {
+          if (i &#x3e; 0) {
+            message += &#x27;,&#x27;;
+          }
+          message += &#x27; &#x27; + j$.pp(expected[i]);
+        }
+      }
+
+      return message + &#x27;.&#x27;;
+    }
+  };
+
+  function isAsymmetric(obj) {
+    return obj &#x26;&#x26; j$.isA_(&#x27;Function&#x27;, obj.asymmetricMatch);
+  }
+
+  function asymmetricMatch(a, b) {
+    var asymmetricA = isAsymmetric(a),
+        asymmetricB = isAsymmetric(b);
+
+    if (asymmetricA &#x26;&#x26; asymmetricB) {
+      return undefined;
+    }
+
+    if (asymmetricA) {
+      return a.asymmetricMatch(b);
+    }
+
+    if (asymmetricB) {
+      return b.asymmetricMatch(a);
+    }
+  }
+
+  // Equality function lovingly adapted from isEqual in
+  //   [Underscore](http://underscorejs.org)
+  function eq(a, b, aStack, bStack, customTesters) {
+    var result = true;
+
+    var asymmetricResult = asymmetricMatch(a, b);
+    if (!j$.util.isUndefined(asymmetricResult)) {
+      return asymmetricResult;
+    }
+
+    for (var i = 0; i &#x3c; customTesters.length; i++) {
+      var customTesterResult = customTesters[i](a, b);
+      if (!j$.util.isUndefined(customTesterResult)) {
+        return customTesterResult;
+      }
+    }
+
+    if (a instanceof Error &#x26;&#x26; b instanceof Error) {
+      return a.message == b.message;
+    }
+
+    // Identical objects are equal. `0 === -0`, but they aren&#x27;t identical.
+    // See the [Harmony `egal` proposal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+    if (a === b) { return a !== 0 || 1 / a == 1 / b; }
+    // A strict comparison is necessary because `null == undefined`.
+    if (a === null || b === null) { return a === b; }
+    var className = Object.prototype.toString.call(a);
+    if (className != Object.prototype.toString.call(b)) { return false; }
+    switch (className) {
+      // Strings, numbers, dates, and booleans are compared by value.
+      case &#x27;[object String]&#x27;:
+        // Primitives and their corresponding object wrappers are equivalent; thus, `&#x22;5&#x22;` is
+        // equivalent to `new String(&#x22;5&#x22;)`.
+        return a == String(b);
+      case &#x27;[object Number]&#x27;:
+        // `NaN`s are equivalent, but non-reflexive. An `egal` comparison is performed for
+        // other numeric values.
+        return a != +a ? b != +b : (a === 0 ? 1 / a == 1 / b : a == +b);
+      case &#x27;[object Date]&#x27;:
+      case &#x27;[object Boolean]&#x27;:
+        // Coerce dates and booleans to numeric primitive values. Dates are compared by their
+        // millisecond representations. Note that invalid dates with millisecond representations
+        // of `NaN` are not equivalent.
+        return +a == +b;
+      // RegExps are compared by their source patterns and flags.
+      case &#x27;[object RegExp]&#x27;:
+        return a.source == b.source &#x26;&#x26;
+          a.global == b.global &#x26;&#x26;
+          a.multiline == b.multiline &#x26;&#x26;
+          a.ignoreCase == b.ignoreCase;
+    }
+    if (typeof a != &#x27;object&#x27; || typeo ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.<span class="apidocCodeKeywordSpan">matchersUtil</span>(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.pp(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.pp" id="apidoc.element.zuul.framework.pp">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>pp
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pp = function (j$) {
+
+  function PrettyPrinter() {
+    this.ppNestLevel_ = 0;
+    this.seen = [];
+  }
+
+  PrettyPrinter.prototype.format = function(value) {
+    this.ppNestLevel_++;
+    try {
+      if (j$.util.isUndefined(value)) {
+        this.emitScalar(&#x27;undefined&#x27;);
+      } else if (value === null) {
+        this.emitScalar(&#x27;null&#x27;);
+      } else if (value === 0 &#x26;&#x26; 1/value === -Infinity) {
+        this.emitScalar(&#x27;-0&#x27;);
+      } else if (value === j$.getGlobal()) {
+        this.emitScalar(&#x27;&#x3c;global&#x3e;&#x27;);
+      } else if (value.jasmineToString) {
+        this.emitScalar(value.jasmineToString());
+      } else if (typeof value === &#x27;string&#x27;) {
+        this.emitString(value);
+      } else if (j$.isSpy(value)) {
+        this.emitScalar(&#x27;spy on &#x27; + value.and.identity());
+      } else if (value instanceof RegExp) {
+        this.emitScalar(value.toString());
+      } else if (typeof value === &#x27;function&#x27;) {
+        this.emitScalar(&#x27;Function&#x27;);
+      } else if (typeof value.nodeType === &#x27;number&#x27;) {
+        this.emitScalar(&#x27;HTMLNode&#x27;);
+      } else if (value instanceof Date) {
+        this.emitScalar(&#x27;Date(&#x27; + value + &#x27;)&#x27;);
+      } else if (j$.util.arrayContains(this.seen, value)) {
+        this.emitScalar(&#x27;&#x3c;circular reference: &#x27; + (j$.isArray_(value) ? &#x27;Array&#x27; : &#x27;Object&#x27;) + &#x27;&#x3e;&#x27;);
+      } else if (j$.isArray_(value) || j$.isA_(&#x27;Object&#x27;, value)) {
+        this.seen.push(value);
+        if (j$.isArray_(value)) {
+          this.emitArray(value);
+        } else {
+          this.emitObject(value);
+        }
+        this.seen.pop();
+      } else {
+        this.emitScalar(value.toString());
+      }
+    } finally {
+      this.ppNestLevel_--;
+    }
+  };
+
+  PrettyPrinter.prototype.iterateObject = function(obj, fn) {
+    for (var property in obj) {
+      if (!Object.prototype.hasOwnProperty.call(obj, property)) { continue; }
+      fn(property, obj.__lookupGetter__ ? (!j$.util.isUndefined(obj.__lookupGetter__(property)) &#x26;&#x26;
+          obj.__lookupGetter__(property) !== null) : false);
+    }
+  };
+
+  PrettyPrinter.prototype.emitArray = j$.unimplementedMethod_;
+  PrettyPrinter.prototype.emitObject = j$.unimplementedMethod_;
+  PrettyPrinter.prototype.emitScalar = j$.unimplementedMethod_;
+  PrettyPrinter.prototype.emitString = j$.unimplementedMethod_;
+
+  function StringPrettyPrinter() {
+    PrettyPrinter.call(this);
+
+    this.string = &#x27;&#x27;;
+  }
+
+  j$.util.inherit(StringPrettyPrinter, PrettyPrinter);
+
+  StringPrettyPrinter.prototype.emitScalar = function(value) {
+    this.append(value);
+  };
+
+  StringPrettyPrinter.prototype.emitString = function(value) {
+    this.append(&#x27;\&#x27;&#x27; + value + &#x27;\&#x27;&#x27;);
+  };
+
+  StringPrettyPrinter.prototype.emitArray = function(array) {
+    if (this.ppNestLevel_ &#x3e; j$.MAX_PRETTY_PRINT_DEPTH) {
+      this.append(&#x27;Array&#x27;);
+      return;
+    }
+    var length = Math.min(array.length, j$.MAX_PRETTY_PRINT_ARRAY_LENGTH);
+    this.append(&#x27;[ &#x27;);
+    for (var i = 0; i &#x3c; length; i++) {
+      if (i &#x3e; 0) {
+        this.append(&#x27;, &#x27;);
+      }
+      this.format(array[i]);
+    }
+    if(array.length &#x3e; length){
+      this.append(&#x27;, ...&#x27;);
+    }
+    this.append(&#x27; ]&#x27;);
+  };
+
+  StringPrettyPrinter.prototype.emitObject = function(obj) {
+    var constructorName = obj.constructor ? j$.fnNameFor(obj.constructor) : &#x27;null&#x27;;
+    this.append(constructorName);
+
+    if (this.ppNestLevel_ &#x3e; j$.MAX_PRETTY_PRINT_DEPTH) {
+      return;
+    }
+
+    var self = this;
+    this.append(&#x27;({ &#x27;);
+    var first = true;
+
+    this.iterateObject(obj, function(property, isGetter) {
+      if (first) {
+        first = false;
+      } else {
+        self.append(&#x27;, &#x27;);
+      }
+
+      self.append(property);
+      self.append(&#x27;: &#x27;);
+      if (isGetter) {
+        self.append(&#x27;&#x3c;getter&#x3e;&#x27;);
+      } else {
+        self.format(obj[property]);
+      }
+    });
+
+    this.append(&#x27; })&#x27;);
+  };
+
+  StringPrettyPrinter.prototype.append = function(value) {
+    this.string += value;
+  };
+
+  return function(value) {
+    var stringPrettyPrinter = new StringPrettyPrinter();
+    stringPrettyPrinter.format(value);
+    return stringPrettyPrinter.string;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+j$.ExceptionFormatter = jRequire.ExceptionFormatter();
+j$.Expectation = jRequire.Expectation();
+j$.buildExpectationResult = jRequire.buildExpectationResult();
+j$.JsApiReporter = jRequire.JsApiReporter();
+j$.matchersUtil = jRequire.matchersUtil(j$);
+j$.ObjectContaining = jRequire.ObjectContaining(j$);
+j$.ArrayContaining = jRequire.ArrayContaining(j$);
+j$.pp = jRequire.<span class="apidocCodeKeywordSpan">pp</span>(j$);
+j$.QueueRunner = jRequire.QueueRunner(j$);
+j$.ReportDispatcher = jRequire.ReportDispatcher();
+j$.Spec = jRequire.Spec(j$);
+j$.SpyRegistry = jRequire.SpyRegistry(j$);
+j$.SpyStrategy = jRequire.SpyStrategy();
+j$.StringMatching = jRequire.StringMatching(j$);
+j$.Suite = jRequire.Suite();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.requireMatchers" id="apidoc.element.zuul.framework.requireMatchers">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>requireMatchers
+        <span class="apidocSignatureSpan">(jRequire, j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">requireMatchers = function (jRequire, j$) {
+  var availableMatchers = [
+      &#x27;toBe&#x27;,
+      &#x27;toBeCloseTo&#x27;,
+      &#x27;toBeDefined&#x27;,
+      &#x27;toBeFalsy&#x27;,
+      &#x27;toBeGreaterThan&#x27;,
+      &#x27;toBeLessThan&#x27;,
+      &#x27;toBeNaN&#x27;,
+      &#x27;toBeNull&#x27;,
+      &#x27;toBeTruthy&#x27;,
+      &#x27;toBeUndefined&#x27;,
+      &#x27;toContain&#x27;,
+      &#x27;toEqual&#x27;,
+      &#x27;toHaveBeenCalled&#x27;,
+      &#x27;toHaveBeenCalledWith&#x27;,
+      &#x27;toMatch&#x27;,
+      &#x27;toThrow&#x27;,
+      &#x27;toThrowError&#x27;
+    ],
+    matchers = {};
+
+  for (var i = 0; i &#x3c; availableMatchers.length; i++) {
+    var name = availableMatchers[i];
+    matchers[name] = jRequire[name](j$);
+  }
+
+  return matchers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    j$.SpyRegistry = jRequire.SpyRegistry(j$);
+    j$.SpyStrategy = jRequire.SpyStrategy();
+    j$.StringMatching = jRequire.StringMatching(j$);
+    j$.Suite = jRequire.Suite();
+    j$.Timer = jRequire.Timer();
+    j$.version = jRequire.version();
+
+    j$.matchers = jRequire.<span class="apidocCodeKeywordSpan">requireMatchers</span>(jRequire, j$);
+
+    return j$;
+  };
+
+  return getJasmineRequire;
+})(this);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBe" id="apidoc.element.zuul.framework.toBe">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBe
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBe = function () {
+  function toBe() {
+    return {
+      compare: function(actual, expected) {
+        return {
+          pass: actual === expected
+        };
+      }
+    };
+  }
+
+  return toBe;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeCloseTo" id="apidoc.element.zuul.framework.toBeCloseTo">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeCloseTo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeCloseTo = function () {
+
+  function toBeCloseTo() {
+    return {
+      compare: function(actual, expected, precision) {
+        if (precision !== 0) {
+          precision = precision || 2;
+        }
+
+        return {
+          pass: Math.abs(expected - actual) &#x3c; (Math.pow(10, -precision) / 2)
+        };
+      }
+    };
+  }
+
+  return toBeCloseTo;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeDefined" id="apidoc.element.zuul.framework.toBeDefined">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeDefined
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeDefined = function () {
+  function toBeDefined() {
+    return {
+      compare: function(actual) {
+        return {
+          pass: (void 0 !== actual)
+        };
+      }
+    };
+  }
+
+  return toBeDefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeFalsy" id="apidoc.element.zuul.framework.toBeFalsy">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeFalsy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeFalsy = function () {
+  function toBeFalsy() {
+    return {
+      compare: function(actual) {
+        return {
+          pass: !!!actual
+        };
+      }
+    };
+  }
+
+  return toBeFalsy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeGreaterThan" id="apidoc.element.zuul.framework.toBeGreaterThan">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeGreaterThan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeGreaterThan = function () {
+
+  function toBeGreaterThan() {
+    return {
+      compare: function(actual, expected) {
+        return {
+          pass: actual &#x3e; expected
+        };
+      }
+    };
+  }
+
+  return toBeGreaterThan;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeLessThan" id="apidoc.element.zuul.framework.toBeLessThan">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeLessThan
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeLessThan = function () {
+  function toBeLessThan() {
+    return {
+
+      compare: function(actual, expected) {
+        return {
+          pass: actual &#x3c; expected
+        };
+      }
+    };
+  }
+
+  return toBeLessThan;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeNaN" id="apidoc.element.zuul.framework.toBeNaN">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeNaN
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeNaN = function (j$) {
+
+  function toBeNaN() {
+    return {
+      compare: function(actual) {
+        var result = {
+          pass: (actual !== actual)
+        };
+
+        if (result.pass) {
+          result.message = &#x27;Expected actual not to be NaN.&#x27;;
+        } else {
+          result.message = function() { return &#x27;Expected &#x27; + j$.pp(actual) + &#x27; to be NaN.&#x27;; };
+        }
+
+        return result;
+      }
+    };
+  }
+
+  return toBeNaN;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeNull" id="apidoc.element.zuul.framework.toBeNull">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeNull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeNull = function () {
+
+  function toBeNull() {
+    return {
+      compare: function(actual) {
+        return {
+          pass: actual === null
+        };
+      }
+    };
+  }
+
+  return toBeNull;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeTruthy" id="apidoc.element.zuul.framework.toBeTruthy">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeTruthy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeTruthy = function () {
+
+  function toBeTruthy() {
+    return {
+      compare: function(actual) {
+        return {
+          pass: !!actual
+        };
+      }
+    };
+  }
+
+  return toBeTruthy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toBeUndefined" id="apidoc.element.zuul.framework.toBeUndefined">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toBeUndefined
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toBeUndefined = function () {
+
+  function toBeUndefined() {
+    return {
+      compare: function(actual) {
+        return {
+          pass: void 0 === actual
+        };
+      }
+    };
+  }
+
+  return toBeUndefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toContain" id="apidoc.element.zuul.framework.toContain">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toContain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toContain = function () {
+  function toContain(util, customEqualityTesters) {
+    customEqualityTesters = customEqualityTesters || [];
+
+    return {
+      compare: function(actual, expected) {
+
+        return {
+          pass: util.contains(actual, expected, customEqualityTesters)
+        };
+      }
+    };
+  }
+
+  return toContain;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toEqual" id="apidoc.element.zuul.framework.toEqual">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toEqual
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toEqual = function () {
+
+  function toEqual(util, customEqualityTesters) {
+    customEqualityTesters = customEqualityTesters || [];
+
+    return {
+      compare: function(actual, expected) {
+        var result = {
+          pass: false
+        };
+
+        result.pass = util.equals(actual, expected, customEqualityTesters);
+
+        return result;
+      }
+    };
+  }
+
+  return toEqual;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toHaveBeenCalled" id="apidoc.element.zuul.framework.toHaveBeenCalled">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toHaveBeenCalled
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHaveBeenCalled = function (j$) {
+
+  function toHaveBeenCalled() {
+    return {
+      compare: function(actual) {
+        var result = {};
+
+        if (!j$.isSpy(actual)) {
+          throw new Error(&#x27;Expected a spy, but got &#x27; + j$.pp(actual) + &#x27;.&#x27;);
+        }
+
+        if (arguments.length &#x3e; 1) {
+          throw new Error(&#x27;toHaveBeenCalled does not take arguments, use toHaveBeenCalledWith&#x27;);
+        }
+
+        result.pass = actual.calls.any();
+
+        result.message = result.pass ?
+          &#x27;Expected spy &#x27; + actual.and.identity() + &#x27; not to have been called.&#x27; :
+          &#x27;Expected spy &#x27; + actual.and.identity() + &#x27; to have been called.&#x27;;
+
+        return result;
+      }
+    };
+  }
+
+  return toHaveBeenCalled;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toHaveBeenCalledWith" id="apidoc.element.zuul.framework.toHaveBeenCalledWith">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toHaveBeenCalledWith
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toHaveBeenCalledWith = function (j$) {
+
+  function toHaveBeenCalledWith(util, customEqualityTesters) {
+    return {
+      compare: function() {
+        var args = Array.prototype.slice.call(arguments, 0),
+          actual = args[0],
+          expectedArgs = args.slice(1),
+          result = { pass: false };
+
+        if (!j$.isSpy(actual)) {
+          throw new Error(&#x27;Expected a spy, but got &#x27; + j$.pp(actual) + &#x27;.&#x27;);
+        }
+
+        if (!actual.calls.any()) {
+          result.message = function() { return &#x27;Expected spy &#x27; + actual.and.identity() + &#x27; to have been called with &#x27; + j$.pp(expectedArgs
+) + &#x27; but it was never called.&#x27;; };
+          return result;
+        }
+
+        if (util.contains(actual.calls.allArgs(), expectedArgs, customEqualityTesters)) {
+          result.pass = true;
+          result.message = function() { return &#x27;Expected spy &#x27; + actual.and.identity() + &#x27; not to have been called with &#x27; + j$.pp
+(expectedArgs) + &#x27; but it was.&#x27;; };
+        } else {
+          result.message = function() { return &#x27;Expected spy &#x27; + actual.and.identity() + &#x27; to have been called with &#x27; + j$.pp(expectedArgs
+) + &#x27; but actual calls were &#x27; + j$.pp(actual.calls.allArgs()).replace(/^\[ | \]$/g, &#x27;&#x27;) + &#x27;.&#x27;; };
+        }
+
+        return result;
+      }
+    };
+  }
+
+  return toHaveBeenCalledWith;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toMatch" id="apidoc.element.zuul.framework.toMatch">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toMatch
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toMatch = function (j$) {
+
+  function toMatch() {
+    return {
+      compare: function(actual, expected) {
+        if (!j$.isString_(expected) &#x26;&#x26; !j$.isA_(&#x27;RegExp&#x27;, expected)) {
+          throw new Error(&#x27;Expected is not a String or a RegExp&#x27;);
+        }
+
+        var regexp = new RegExp(expected);
+
+        return {
+          pass: regexp.test(actual)
+        };
+      }
+    };
+  }
+
+  return toMatch;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toThrow" id="apidoc.element.zuul.framework.toThrow">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toThrow
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toThrow = function (j$) {
+
+  function toThrow(util) {
+    return {
+      compare: function(actual, expected) {
+        var result = { pass: false },
+          threw = false,
+          thrown;
+
+        if (typeof actual != &#x27;function&#x27;) {
+          throw new Error(&#x27;Actual is not a Function&#x27;);
+        }
+
+        try {
+          actual();
+        } catch (e) {
+          threw = true;
+          thrown = e;
+        }
+
+        if (!threw) {
+          result.message = &#x27;Expected function to throw an exception.&#x27;;
+          return result;
+        }
+
+        if (arguments.length == 1) {
+          result.pass = true;
+          result.message = function() { return &#x27;Expected function not to throw, but it threw &#x27; + j$.pp(thrown) + &#x27;.&#x27;; };
+
+          return result;
+        }
+
+        if (util.equals(thrown, expected)) {
+          result.pass = true;
+          result.message = function() { return &#x27;Expected function not to throw &#x27; + j$.pp(expected) + &#x27;.&#x27;; };
+        } else {
+          result.message = function() { return &#x27;Expected function to throw &#x27; + j$.pp(expected) + &#x27;, but it threw &#x27; +  j$.pp(thrown
+) + &#x27;.&#x27;; };
+        }
+
+        return result;
+      }
+    };
+  }
+
+  return toThrow;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.toThrowError" id="apidoc.element.zuul.framework.toThrowError">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>toThrowError
+        <span class="apidocSignatureSpan">(j$)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toThrowError = function (j$) {
+  function toThrowError (util) {
+    return {
+      compare: function(actual) {
+        var threw = false,
+          pass = {pass: true},
+          fail = {pass: false},
+          thrown;
+
+        if (typeof actual != &#x27;function&#x27;) {
+          throw new Error(&#x27;Actual is not a Function&#x27;);
+        }
+
+        var errorMatcher = getMatcher.apply(null, arguments);
+
+        try {
+          actual();
+        } catch (e) {
+          threw = true;
+          thrown = e;
+        }
+
+        if (!threw) {
+          fail.message = &#x27;Expected function to throw an Error.&#x27;;
+          return fail;
+        }
+
+        if (!(thrown instanceof Error)) {
+          fail.message = function() { return &#x27;Expected function to throw an Error, but it threw &#x27; + j$.pp(thrown) + &#x27;.&#x27;; };
+          return fail;
+        }
+
+        if (errorMatcher.hasNoSpecifics()) {
+          pass.message = &#x27;Expected function not to throw an Error, but it threw &#x27; + j$.fnNameFor(thrown) + &#x27;.&#x27;;
+          return pass;
+        }
+
+        if (errorMatcher.matches(thrown)) {
+          pass.message = function() {
+            return &#x27;Expected function not to throw &#x27; + errorMatcher.errorTypeDescription + errorMatcher.messageDescription() + &#x27;.&#x27;;
+          };
+          return pass;
+        } else {
+          fail.message = function() {
+            return &#x27;Expected function to throw &#x27; + errorMatcher.errorTypeDescription + errorMatcher.messageDescription() +
+              &#x27;, but it threw &#x27; + errorMatcher.thrownDescription(thrown) + &#x27;.&#x27;;
+          };
+          return fail;
+        }
+      }
+    };
+
+    function getMatcher() {
+      var expected = null,
+          errorType = null;
+
+      if (arguments.length == 2) {
+        expected = arguments[1];
+        if (isAnErrorType(expected)) {
+          errorType = expected;
+          expected = null;
+        }
+      } else if (arguments.length &#x3e; 2) {
+        errorType = arguments[1];
+        expected = arguments[2];
+        if (!isAnErrorType(errorType)) {
+          throw new Error(&#x27;Expected error type is not an Error.&#x27;);
+        }
+      }
+
+      if (expected &#x26;&#x26; !isStringOrRegExp(expected)) {
+        if (errorType) {
+          throw new Error(&#x27;Expected error message is not a string or RegExp.&#x27;);
+        } else {
+          throw new Error(&#x27;Expected is not an Error, string, or RegExp.&#x27;);
+        }
+      }
+
+      function messageMatch(message) {
+        if (typeof expected == &#x27;string&#x27;) {
+          return expected == message;
+        } else {
+          return expected.test(message);
+        }
+      }
+
+      return {
+        errorTypeDescription: errorType ? j$.fnNameFor(errorType) : &#x27;an exception&#x27;,
+        thrownDescription: function(thrown) {
+          var thrownName = errorType ? j$.fnNameFor(thrown.constructor) : &#x27;an exception&#x27;,
+              thrownMessage = &#x27;&#x27;;
+
+          if (expected) {
+            thrownMessage = &#x27; with message &#x27; + j$.pp(thrown.message);
+          }
+
+          return thrownName + thrownMessage;
+        },
+        messageDescription: function() {
+          if (expected === null) {
+            return &#x27;&#x27;;
+          } else if (expected instanceof RegExp) {
+            return &#x27; with a message matching &#x27; + j$.pp(expected);
+          } else {
+            return &#x27; with message &#x27; + j$.pp(expected);
+          }
+        },
+        hasNoSpecifics: function() {
+          return expected === null &#x26;&#x26; errorType === null;
+        },
+        matches: function(error) {
+          return (errorType === null || error.constructor === errorType) &#x26;&#x26;
+            (expected === null || messageMatch(error.message));
+        }
+      };
+    }
+
+    function isStringOrRegExp(potential) {
+      return potential instanceof RegExp || (typeof potential == &#x27;string&#x27;);
+    }
+
+    function isAnErrorType(type) {
+      if (typeof type !== &#x27;function&#x27;) {
+        return false;
+      }
+
+      var Surrogate = function() {};
+      Surrogate.prototype = type.prototype;
+      return (new Surrogate()) instanceof Error;
+    }
+  }
+
+  return toThrowError;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.util" id="apidoc.element.zuul.framework.util">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>util
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">util = function () {
+
+  var util = {};
+
+  util.inherit = function(childClass, parentClass) {
+    var Subclass = function() {
+    };
+    Subclass.prototype = parentClass.prototype;
+    childClass.prototype = new Subclass();
+  };
+
+  util.htmlEscape = function(str) {
+    if (!str) {
+      return str;
+    }
+    return str.replace(/&#x26;/g, &#x27;&#x26;amp;&#x27;)
+      .replace(/&#x3c;/g, &#x27;&#x26;lt;&#x27;)
+      .replace(/&#x3e;/g, &#x27;&#x26;gt;&#x27;);
+  };
+
+  util.argsToArray = function(args) {
+    var arrayOfArgs = [];
+    for (var i = 0; i &#x3c; args.length; i++) {
+      arrayOfArgs.push(args[i]);
+    }
+    return arrayOfArgs;
+  };
+
+  util.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  util.arrayContains = function(array, search) {
+    var i = array.length;
+    while (i--) {
+      if (array[i] === search) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  util.clone = function(obj) {
+    if (Object.prototype.toString.apply(obj) === &#x27;[object Array]&#x27;) {
+      return obj.slice();
+    }
+
+    var cloned = {};
+    for (var prop in obj) {
+      if (obj.hasOwnProperty(prop)) {
+        cloned[prop] = obj[prop];
+      }
+    }
+
+    return cloned;
+  };
+
+  return util;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+return jasmineRequire;
+  }
+
+  getJasmineRequire().core = function(jRequire) {
+var j$ = {};
+
+jRequire.base(j$, jasmineGlobal);
+j$.util = jRequire.<span class="apidocCodeKeywordSpan">util</span>();
+j$.Any = jRequire.Any();
+j$.Anything = jRequire.Anything(j$);
+j$.CallTracker = jRequire.CallTracker();
+j$.MockDate = jRequire.MockDate();
+j$.Clock = jRequire.Clock();
+j$.DelayedFunctionScheduler = jRequire.DelayedFunctionScheduler();
+j$.Env = jRequire.Env(j$);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.framework.version" id="apidoc.element.zuul.framework.version">
+        function <span class="apidocSignatureSpan">zuul.framework.</span>version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">version = function () {
+  return &#x27;2.2.0&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  j$.ReportDispatcher = jRequire.ReportDispatcher();
+  j$.Spec = jRequire.Spec(j$);
+  j$.SpyRegistry = jRequire.SpyRegistry(j$);
+  j$.SpyStrategy = jRequire.SpyStrategy();
+  j$.StringMatching = jRequire.StringMatching(j$);
+  j$.Suite = jRequire.Suite();
+  j$.Timer = jRequire.Timer();
+  j$.version = jRequire.<span class="apidocCodeKeywordSpan">version</span>();
+
+  j$.matchers = jRequire.requireMatchers(jRequire, j$);
+
+  return j$;
+};
+
+return getJasmineRequire;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.zuul.hl" id="apidoc.module.zuul.hl">module zuul.hl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.fixMarkup" id="apidoc.element.zuul.hl.fixMarkup">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>fixMarkup
+        <span class="apidocSignatureSpan">(value, tabReplace, useBR)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fixMarkup(value, tabReplace, useBR) {
+  if (tabReplace) {
+    value = value.replace(/^((&#x3c;[^&#x3e;]+&#x3e;|\t)+)/gm, function(match, p1, offset, s) {
+      return p1.replace(/\t/g, tabReplace);
+    });
+  }
+  if (useBR) {
+    value = value.replace(/\n/g, &#x27;&#x3c;br&#x3e;&#x27;);
+  }
+  return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.highlight" id="apidoc.element.zuul.hl.highlight">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>highlight
+        <span class="apidocSignatureSpan">(language_name, value, ignore_illegals, continuation)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function highlight(language_name, value, ignore_illegals, continuation) {
+
+  function subMode(lexem, mode) {
+    for (var i = 0; i &#x3c; mode.contains.length; i++) {
+      var match = mode.contains[i].beginRe.exec(lexem);
+      if (match &#x26;&#x26; match.index == 0) {
+        return mode.contains[i];
+      }
+    }
+  }
+
+  function endOfMode(mode, lexem) {
+    if (mode.end &#x26;&#x26; mode.endRe.test(lexem)) {
+      return mode;
+    }
+    if (mode.endsWithParent) {
+      return endOfMode(mode.parent, lexem);
+    }
+  }
+
+  function isIllegal(lexem, mode) {
+    return !ignore_illegals &#x26;&#x26; mode.illegal &#x26;&#x26; mode.illegalRe.test(lexem);
+  }
+
+  function keywordMatch(mode, match) {
+    var match_str = language.case_insensitive ? match[0].toLowerCase() : match[0];
+    return mode.keywords.hasOwnProperty(match_str) &#x26;&#x26; mode.keywords[match_str];
+  }
+
+  function processKeywords() {
+    var buffer = escape(mode_buffer);
+    if (!top.keywords)
+      return buffer;
+    var result = &#x27;&#x27;;
+    var last_index = 0;
+    top.lexemsRe.lastIndex = 0;
+    var match = top.lexemsRe.exec(buffer);
+    while (match) {
+      result += buffer.substr(last_index, match.index - last_index);
+      var keyword_match = keywordMatch(top, match);
+      if (keyword_match) {
+        keyword_count += keyword_match[1];
+        result += &#x27;&#x3c;span class=&#x22;&#x27;+ keyword_match[0] +&#x27;&#x22;&#x3e;&#x27; + match[0] + &#x27;&#x3c;/span&#x3e;&#x27;;
+      } else {
+        result += match[0];
+      }
+      last_index = top.lexemsRe.lastIndex;
+      match = top.lexemsRe.exec(buffer);
+    }
+    return result + buffer.substr(last_index);
+  }
+
+  function processSubLanguage() {
+    if (top.subLanguage &#x26;&#x26; !languages[top.subLanguage]) {
+      return escape(mode_buffer);
+    }
+    var continuation = top.subLanguageMode == &#x27;continuous&#x27; ? top.top : undefined;
+    var result = top.subLanguage ? highlight(top.subLanguage, mode_buffer, true, continuation) : highlightAuto(mode_buffer);
+    // Counting embedded language score towards the host language may be disabled
+    // with zeroing the containing mode relevance. Usecase in point is Markdown that
+    // allows XML everywhere and makes every XML snippet to have a much larger Markdown
+    // score.
+    if (top.relevance &#x3e; 0) {
+      keyword_count += result.keyword_count;
+      relevance += result.relevance;
+    }
+    top.top = result.top;
+    return &#x27;&#x3c;span class=&#x22;&#x27; + result.language  + &#x27;&#x22;&#x3e;&#x27; + result.value + &#x27;&#x3c;/span&#x3e;&#x27;;
+  }
+
+  function processBuffer() {
+    return top.subLanguage !== undefined ? processSubLanguage() : processKeywords();
+  }
+
+  function startNewMode(mode, lexem) {
+    var markup = mode.className? &#x27;&#x3c;span class=&#x22;&#x27; + mode.className + &#x27;&#x22;&#x3e;&#x27;: &#x27;&#x27;;
+    if (mode.returnBegin) {
+      result += markup;
+      mode_buffer = &#x27;&#x27;;
+    } else if (mode.excludeBegin) {
+      result += escape(lexem) + markup;
+      mode_buffer = &#x27;&#x27;;
+    } else {
+      result += markup;
+      mode_buffer = lexem;
+    }
+    top = Object.create(mode, {parent: {value: top}});
+  }
+
+  function processLexem(buffer, lexem) {
+    mode_buffer += buffer;
+    if (lexem === undefined) {
+      result += processBuffer();
+      return 0;
+    }
+
+    var new_mode = subMode(lexem, top);
+    if (new_mode) {
+      result += processBuffer();
+      startNewMode(new_mode, lexem);
+      return new_mode.returnBegin ? 0 : lexem.length;
+    }
+
+    var end_mode = endOfMode(top, lexem);
+    if (end_mode) {
+      var origin = top;
+      if (!(origin.returnEnd || origin.excludeEnd)) {
+        mode_buffer += lexem;
+      }
+      result += processBuffer();
+      do {
+        if (top.className) {
+          result += &#x27;&#x3c;/span&#x3e;&#x27;;
+        }
+        relevance += top.relevance;
+        top = top.parent;
+      } while (top != end_mode.parent);
+      if (origin.excludeEnd) {
+        result += escape(lexem);
+      }
+      mode_buffer = &#x27;&#x27;;
+      if (end_mode.starts) {
+        startNewMode(end_mode.starts, &#x27;&#x27;);
+      }
+      return origin.returnEnd ? 0 : lexem.length;
+    }
+
+    if (isIllegal(lexem, top))
+      throw new Error(&#x27;Illegal lexem &#x22;&#x27; + lexem + &#x27;&#x22; for mode &#x22;&#x27; + (top.className || &#x27;&#x3c;unnamed&#x3e;&#x27;) + &#x27;&#x22;&#x27;);
+
+    /*
+    Parser should not reach this point as all types of ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// hljs is pretty bad at guessing the language
+var ext = frame.filename.slice(-3);
+
+var highlight_fn = hljs.highlightAuto;
+if (ext === &#x27;.js&#x27;) {
+    highlight_fn = function(src) {
+        return hljs.<span class="apidocCodeKeywordSpan">highlight</span>(&#x27;javascript&#x27;, src)
+    }
+}
+
+try {
+    return highlight_fn(code).value;
+} catch (e) {
+    return code;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.highlightAuto" id="apidoc.element.zuul.hl.highlightAuto">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>highlightAuto
+        <span class="apidocSignatureSpan">(text)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function highlightAuto(text) {
+  var result = {
+    keyword_count: 0,
+    relevance: 0,
+    value: escape(text)
+  };
+  var second_best = result;
+  for (var key in languages) {
+    if (!languages.hasOwnProperty(key))
+      continue;
+    var current = highlight(key, text, false);
+    current.language = key;
+    if (current.keyword_count + current.relevance &#x3e; second_best.keyword_count + second_best.relevance) {
+      second_best = current;
+    }
+    if (current.keyword_count + current.relevance &#x3e; result.keyword_count + result.relevance) {
+      second_best = result;
+      result = current;
+    }
+  }
+  if (second_best.language) {
+    result.second_best = second_best;
+  }
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.highlightBlock" id="apidoc.element.zuul.hl.highlightBlock">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>highlightBlock
+        <span class="apidocSignatureSpan">(block, tabReplace, useBR)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function highlightBlock(block, tabReplace, useBR) {
+  var text = blockText(block, useBR);
+  var language = blockLanguage(block);
+  if (language == &#x27;no-highlight&#x27;)
+      return;
+  var result = language ? highlight(language, text, true) : highlightAuto(text);
+  language = result.language;
+  var original = nodeStream(block);
+  if (original.length) {
+    var pre = document.createElementNS(&#x27;http://www.w3.org/1999/xhtml&#x27;, &#x27;pre&#x27;);
+    pre.innerHTML = result.value;
+    result.value = mergeStreams(original, nodeStream(pre), text);
+  }
+  result.value = fixMarkup(result.value, tabReplace, useBR);
+
+  var class_name = block.className;
+  if (!class_name.match(&#x27;(\\s|^)(language-)?&#x27; + language + &#x27;(\\s|$)&#x27;)) {
+    class_name = class_name ? (class_name + &#x27; &#x27; + language) : language;
+  }
+  block.innerHTML = result.value;
+  block.className = class_name;
+  block.result = {
+    language: language,
+    kw: result.keyword_count,
+    re: result.relevance
+  };
+  if (result.second_best) {
+    block.second_best = {
+      language: result.second_best.language,
+      kw: result.second_best.keyword_count,
+      re: result.second_best.relevance
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.inherit" id="apidoc.element.zuul.hl.inherit">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>inherit
+        <span class="apidocSignatureSpan">(parent, obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">inherit = function (parent, obj) {
+  var result = {};
+  for (var key in parent)
+    result[key] = parent[key];
+  if (obj)
+    for (var key in obj)
+      result[key] = obj[key];
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function StringPrettyPrinter() {
+  PrettyPrinter.call(this);
+
+  this.string = &#x27;&#x27;;
+}
+
+j$.util.<span class="apidocCodeKeywordSpan">inherit</span>(StringPrettyPrinter, PrettyPrinter);
+
+StringPrettyPrinter.prototype.emitScalar = function(value) {
+  this.append(value);
+};
+
+StringPrettyPrinter.prototype.emitString = function(value) {
+  this.append(&#x27;\&#x27;&#x27; + value + &#x27;\&#x27;&#x27;);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.initHighlighting" id="apidoc.element.zuul.hl.initHighlighting">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>initHighlighting
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initHighlighting() {
+  if (initHighlighting.called)
+    return;
+  initHighlighting.called = true;
+  Array.prototype.map.call(document.getElementsByTagNameNS(&#x27;http://www.w3.org/1999/xhtml&#x27;, &#x27;pre&#x27;), findCode).
+    filter(Boolean).
+    forEach(function(code){highlightBlock(code, hljs.tabReplace);});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.zuul.hl.initHighlightingOnLoad" id="apidoc.element.zuul.hl.initHighlightingOnLoad">
+        function <span class="apidocSignatureSpan">zuul.hl.</span>initHighlightingOnLoad
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initHighlightingOnLoad() {
+  window.addEventListener(&#x27;DOMContentLoaded&#x27;, initHighlighting, false);
+  window.addEventListener(&#x27;load&#x27;, initHighlighting, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
